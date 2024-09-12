@@ -1,0 +1,38 @@
+#!/usr/bin/perl
+use DBI;
+
+$project = "GSE87571";
+
+# Database configuration
+my $dbname = 'fy_tatu';
+my $host = 'localhost';
+my $port = '3306';
+my $user = 'root';
+my $password = '';
+
+# Connect to the database
+my $dsn = "DBI:mysql:database=$dbname;host=$host;port=$port";
+my $dbh = DBI->connect($dsn, $user, $password, {'RaiseError' => 1});
+
+@files = `find . -type f -name "betas.txt"`;
+foreach $linha(@files){
+    chomp $linha;
+    open(ARQUIVO, "< $linha");
+    @arquivo = <ARQUIVO>;
+    close(ARQUIVO);
+    ($sample) = $linha =~ /(GSM\d+)/;
+    foreach $l(@arquivo){
+        chomp $l;
+        ($cpg, $value) = split(/ +/,$l);
+        $cpg =~ s/\"//g;
+        $value =~ s/NA/0/;
+        print "$project|$sample|$cpg|$value|\n";
+        my $sth = $dbh->prepare("INSERT INTO tatu_betas (project, sample, cpg, value) VALUES (?,?,?,?)");
+        $sth->execute($project, $sample, $cpg, $value);
+        $sth->finish();
+    }
+}
+
+# Disconnect from the database
+$dbh->disconnect();
+

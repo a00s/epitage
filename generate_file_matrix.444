@@ -1,0 +1,53 @@
+#!/usr/bin/perl
+open(ARQUIVO, "< gsm_sex_age.csv");
+@arquivo = <ARQUIVO>;
+close(ARQUIVO);
+$keyname = @ARGV[0];
+$cpgsinput = @ARGV[1];
+my %ff;
+foreach $linha(@arquivo){
+    chomp $linha;
+    $cont++;
+    if($cont == 1){next;}
+    @t = split(/\,/,$linha);
+    $ff{@t[0]}{"sex"} = @t[1];
+    $age = @t[2];
+    ($age) = $age =~ /(\d+)/;
+    $ff{@t[0]}{"age"} = $age;
+}
+my @cpgsb = split(/\,/,$cpgsinput);
+my $joincpg = join('|', map { "\"$_\"" } @cpgsb);
+@resultado = `grep -E '$joincpg' ../GSM*/betas.txt`;
+foreach $linha(@resultado){
+     chomp $linha;
+     ($gsm) = $linha =~ /(GSM\d+)/;
+     ($cg) = $linha =~ /(cg\d+)/;
+     ($value) = $linha =~ /(\d+(\.\d+)?|NA)$/;
+     $value =~ s/NA/0.0/;
+     $ff{$gsm}{$cg} = $value;
+}
+open(ARQUIVO, "> output/temp/$keyname\.csv");
+print ARQUIVO "GSM,sex,age";
+foreach $ls(@cpgsb){
+    print ARQUIVO ",$ls";
+}
+print ARQUIVO "\n";
+foreach $linha(@arquivo){
+    chomp $linha;
+    $linhacsv = "";
+    $cont2++;
+    $temitem = 0;
+    if($cont2 == 1){next;}
+    @t = split(/\,/,$linha);
+    foreach $ls(@cpgsb){
+	if($ff{@t[0]}{$ls} > 0){
+	    $temitem = 1;
+	}
+	$linhacsv .= ",".$ff{@t[0]}{$ls};
+    }
+    if($temitem == 1){
+	print ARQUIVO "@t[0],$ff{@t[0]}{'sex'},$ff{@t[0]}{'age'}$linhacsv\n";
+    }
+}
+close(ARQUIVO);
+

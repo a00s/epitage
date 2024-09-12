@@ -1,0 +1,25 @@
+#!/usr/bin/perl
+$cpglist = "any word to start";
+while ($cpglist ne ""){
+$cpglist = `mysql --skip-column-names fy_tatu << EOF
+SELECT cpg FROM tatu_cpgs WHERE r IS NULL AND r_squared IS NULL LIMIT 1
+EOF`;
+chomp $cpglist;
+print "$cpglist \t";
+$result = `mysql --skip-column-names fy_tatu << EOF
+SELECT (COUNT(*) * SUM(value * age) - SUM(value) * SUM(age)) / SQRT((COUNT(*) * SUM(value * value) - SUM(value) * SUM(value)) *          (COUNT(*) * SUM(age * age) - SUM(age) * SUM(age))) AS r, 
+POW((COUNT(*) * SUM(value * age) - SUM(value) * SUM(age)) / SQRT((COUNT(*) * SUM(value * value) - SUM(value) * SUM(value)) *          (COUNT(*) * SUM(age * age) - SUM(age) * SUM(age))), 2) AS 
+R_squared FROM tatu_betas LEFT JOIN tatu_samples USING(sample) WHERE cpg = "$cpglist";
+EOF`;
+chomp $result;
+($r, $r_squared) = split(/\t/, $result);
+print "$r \t $r_squared \n";
+if($r eq "NULL" && $r_squared eq "NULL"){
+ $r = 0.0;
+ $r_squared = 0.0;
+}
+`mysql --skip-column-names fy_tatu << EOF
+UPDATE tatu_cpgs SET r = $r, r_squared = $r_squared WHERE cpg = "$cpglist"
+EOF`;
+}
+

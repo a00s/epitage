@@ -1,0 +1,17 @@
+#!/usr/bin/perl
+open(ARQUIVO,"planilha.csv");
+@arquivo = <ARQUIVO>;
+close(ARQUIVO);
+foreach $linha(@arquivo){
+    chomp $linha;
+    @t = split(/\,/,$linha);
+    @genes = split(/\;/,@t[1]);
+    foreach $l(@genes){
+	# print "@t[0] $l\n";
+	$cpgs{@t[0]} = $l;
+    }
+}
+foreach my $chave(keys %cpgs){
+    print "$chave;$cpgs{$chave}\n";
+}
+
