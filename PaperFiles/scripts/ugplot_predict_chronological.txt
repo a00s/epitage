@@ -1,0 +1,129 @@
+library(ggplot2)
+library(grid)
+
+# ===== parâmetros fáceis de editar =====
+main_title <- "Epitage prediction ENST00000537075.3"
+model_name <- "KCNS1"
+pt_col     <- "#0072B2"
+
+# Perfil de tamanhos
+size_mode <- "compacto"   # "compacto" (~600x600) ou "grande" (~1200x1200)
+if (identical(size_mode, "compacto")) {
+  sz_axis_text  <- 14; sz_axis_title <- 16; sz_title <- 18; sz_subtitle <- 14; sz_stamp <- 18
+  sz_inset      <- 12
+} else {
+  sz_axis_text  <- 40; sz_axis_title <- 40; sz_title <- 40; sz_subtitle <- 32; sz_stamp <- 30
+  sz_inset      <- 16
+}
+
+# -------- entrada do ugPlot --------
+.D <- {{dataset}}
+
+to_df <- function(X){
+  if (is.data.frame(X)) return(X)
+  if (is.matrix(X))     return(as.data.frame(X))
+  stop("Passe uma tabela (data.frame/matrix) com Real.age e Predicted.age.")
+}
+df0 <- to_df(.D)
+
+# garantir nomes
+if (!all(c("Real.age","Predicted.age") %in% names(df0))) {
+  if (ncol(df0) >= 2) {
+    names(df0)[1:2] <- c("Real.age","Predicted.age")
+  } else stop("Não encontrei colunas Real.age e Predicted.age e a tabela tem < 2 colunas.")
+}
+
+# sanitização
+df <- data.frame(
+  Real.age      = suppressWarnings(as.numeric(df0[["Real.age"]])),
+  Predicted.age = suppressWarnings(as.numeric(df0[["Predicted.age"]]))
+)
+df <- df[is.finite(df$Real.age) & is.finite(df$Predicted.age), , drop = FALSE]
+if (nrow(df) < 2) stop("Dados insuficientes após limpeza (n < 2).")
+
+# ===== estatísticas (namespaced p/ evitar conflitos) =====
+fit       <- stats::lm(Predicted.age ~ Real.age, data = df)
+r2_lm     <- summary(fit)$r.squared
+pearson_r <- suppressWarnings(stats::cor(df$Real.age, df$Predicted.age, use = "complete.obs"))
+mae       <- mean(abs(df$Predicted.age - df$Real.age), na.rm = TRUE)
+
+sub_txt <- sprintf("R² = %.3f   Pearson r = %.3f   n = %d   MAE = %.2f",
+                   r2_lm, pearson_r, nrow(df), mae)
+
+# coeficientes
+b0 <- unname(coef(fit)[1])  # intercepto
+b1 <- unname(coef(fit)[2])  # slope
+
+# limites: mínimo 0–100 + respiro
+raw_max <- max(df$Real.age, df$Predicted.age, na.rm = TRUE)
+extra   <- if (raw_max > 100) 10 else 0
+lim_max <- max(100, raw_max + extra)
+
+# texto slope/intercept
+lbl_si <- sprintf("slope = %.2f   intercept = %.2f", b1, b0)
+
+# ===== plot =====
+p <- ggplot(df, aes(x = Real.age, y = Predicted.age)) +
+  # marcadores do limite 100 (em "L")
+  annotate("segment", x = 0,   xend = 100, y = 100, yend = 100,
+           colour = "black", linetype = "dashed", linewidth = 0.6, alpha = 0.85) +
+  annotate("segment", x = 100, xend = 100, y = 0,   yend = 100,
+           colour = "black", linetype = "dashed", linewidth = 0.6, alpha = 0.85) +
+  # pontos
+  geom_point(color = pt_col, size = 2, alpha = 0.8) +
+  # linha de tendência
+  geom_abline(intercept = b0, slope = b1, colour = "black", linewidth = 0.5) +
+  # slope/intercept no canto
+  annotate("label",
+           x = lim_max * 0.02, y = lim_max * 0.98,
+           label = lbl_si,
+           size = sz_inset/3.5, label.size = 0, fill = "white", alpha = 0.75,
+           hjust = 0, vjust = 1) +
+  # eixo quadrado e limites
+  coord_fixed(xlim = c(0, lim_max), ylim = c(0, lim_max), clip = "on") +
+  scale_x_continuous(breaks = seq(0, lim_max, by = 10),
+                     expand = expansion(mult = c(0, 0.02))) +
+  scale_y_continuous(breaks = seq(0, lim_max, by = 20),
+                     expand = c(0, 0)) +
+  labs(
+    title    = main_title,
+    subtitle = sub_txt,
+    x = "Chronological age",
+    y = "Predicted age                                                     "   # <<< título padrão do eixo Y de volta
+  ) +
+  # carimbo do modelo
+  annotate("text",
+           x = lim_max - 5, y = lim_max * 0.10,
+           label = model_name,
+           color = "grey70",
+           size = sz_stamp * 0.70, fontface = "bold",
+           hjust = 1, vjust = 0) +
+  theme_bw() +
+  theme(
+    aspect.ratio       = 1,
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor.x = element_blank(),
+    panel.grid.minor.y = element_blank(),
+    panel.grid.major.y = element_line(size = 0.6, colour = "grey80"),
+    axis.line          = element_line(size = 0.8, colour = "black"),
+    axis.ticks         = element_line(size = 0.8, colour = "black"),
+    axis.ticks.length  = unit(6, "pt"),
+    axis.text.x        = element_text(size = sz_axis_text, angle = 90, vjust = 0.5, hjust = 1),
+    axis.text.y        = element_text(size = sz_axis_text),
+    # <<< mover o título Y para BAIXO, fora do painel >>>
+    axis.title.y       = ggplot2::element_text(
+                           size = sz_axis_title, face = "bold",
+                           vjust = -2,                      # valores negativos empurram pra baixo
+                           margin = ggplot2::margin(r = 6)  # respiro do eixo (namespaced)
+                         ),
+    axis.title.x       = element_text(size = sz_axis_title, face = "bold", hjust = 0),
+    plot.title         = element_text(hjust = 0.5, face = "bold", size = sz_title),
+    plot.subtitle      = element_text(hjust = 0.5, size = sz_subtitle),
+    panel.border       = element_rect(colour = "black", fill = NA, linewidth = 0.8)
+  )
+
+# Shiny (exibição na tela)
+output$plot <- renderPlot({ p }, width = 900, height = 900, res = 144)
+
+
+

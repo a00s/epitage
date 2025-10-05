@@ -1,0 +1,119 @@
+library(ggplot2)
+library(grid)
+
+# ===== parâmetros =====
+transcript_name <- "ENST00000352632.7"
+model_name <- "SPTBN4"
+bin_w  <- 0.005
+y_max  <- 900
+x_break <- 0.1
+# ======================
+
+# ----------- NORMALIZAÇÃO ROBUSTA -----------
+vals_raw <- {{dataset}}
+
+pick_r2_column <- function(X) {
+  # retorna vetor numérico candidato a R²
+  if (is.vector(X)) return(as.numeric(X))
+
+  if (is.matrix(X)) X <- as.data.frame(X)
+
+  # prioriza nomes típicos de R²
+  nms <- tolower(names(X))
+  hit <- which(nms %in% c("r2","r.2","r²"))
+  if (length(hit) == 0) {
+    # também aceita nomes que contenham r2/r.2
+    hit <- grep("(^|[^a-z])r\\.?2($|[^a-z])|r²", nms, perl = TRUE)
+  }
+  if (length(hit) >= 1) return(as.numeric(X[[hit[1]]]))
+
+  # fallback: pega a coluna NUMÉRICA com maior variância dentro de [0,1]
+  num_cols <- sapply(X, is.numeric)
+  if (!any(num_cols)) num_cols <- sapply(X, function(z) all(!is.na(suppressWarnings(as.numeric(z)))))
+  cand <- which(num_cols)
+  if (length(cand) == 0) stop("Nenhuma coluna numérica encontrada em {{dataset}}.")
+
+  # calcula variância após truncar a [0,1]
+  vars <- sapply(cand, function(j){
+    v <- suppressWarnings(as.numeric(X[[j]]))
+    v <- v[is.finite(v)]
+    v <- v[v >= 0 & v <= 1]
+    stats::var(v, na.rm = TRUE)
+  })
+  j_best <- cand[which.max(vars)]
+  as.numeric(X[[j_best]])
+}
+
+vals_vec <- pick_r2_column(vals_raw)
+
+# filtra válidos em [0,1]
+valid_idx <- is.finite(vals_vec) & vals_vec >= 0 & vals_vec <= 1
+vals <- vals_vec[valid_idx]
+d_valid <- data.frame(R.2 = vals)
+# -------------------------------------------
+
+# estatísticas
+m_mean   <- mean(d_valid$R.2, na.rm = TRUE)
+m_median <- median(d_valid$R.2, na.rm = TRUE)
+iqr      <- IQR(d_valid$R.2, na.rm = TRUE)
+n_val    <- length(vals)
+
+# min/max
+x_min <- min(d_valid$R.2, na.rm = TRUE)
+x_max <- max(d_valid$R.2, na.rm = TRUE)
+
+sub_txt <- paste0(
+  "n = ", n_val,
+  "   Median = ", round(m_median, 3),
+  "   Mean = ", round(m_mean, 3),
+  "   IQR = ", round(iqr, 3)
+)
+
+# ===== plot =====
+ggplot(d_valid, aes(x = R.2)) +
+  geom_histogram(binwidth = bin_w, fill = "#0072B2", color = "black",
+                 boundary = 0, closed = "left", linewidth = 0.4) +
+  scale_x_continuous(limits = c(0, 1),
+                     breaks = seq(0.1, 1, x_break),
+                     expand = expansion(mult = c(0, 0.02))) +
+  scale_y_continuous(limits = c(0, y_max),
+                     breaks = pretty(c(0, y_max), n = 6),
+                     expand = c(0, 0)) +
+  labs(
+    title = paste("Distribution of R² -", transcript_name),
+    subtitle = sub_txt,
+    x = expression(bold(R^2)),
+    y = expression(bold("Frequency                              "))
+  ) +
+  # mediana (azul pontilhado)
+  geom_vline(xintercept = m_median, color = "blue",
+             linetype = "dotted", linewidth = 1.2) +
+  # min/max (cinza tracejado grosso)
+  geom_vline(xintercept = x_min, colour = "gray60",
+             linetype = "dashed", linewidth = 3) +
+  geom_vline(xintercept = x_max, colour = "gray60",
+             linetype = "dashed", linewidth = 3) +
+  # label do modelo (canto inferior esquerdo)
+  annotate("text",
+           x = 0.05, y = y_max*0.1,
+           label = model_name,
+           color = "grey70",
+           size = 30, fontface = "bold",
+           hjust = 0, vjust = 0) +
+  theme_bw(base_size = 20) +
+  theme(
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor.x = element_blank(),
+    panel.grid.minor.y = element_blank(),
+    panel.grid.major.y = element_line(size = 0.6, colour = "grey80"),
+    axis.line        = element_line(size = 0.8, colour = "black"),
+    axis.ticks       = element_line(size = 0.8, colour = "black"),
+    axis.ticks.length= unit(6, "pt"),
+    axis.text.x      = element_text(size = 40, angle = 90, vjust = 0.5, hjust = 1),
+    axis.text.y      = element_text(size = 40),
+    axis.title.x     = element_text(size = 40, face = "bold", hjust = 0),
+    axis.title.y     = element_text(size = 40, face = "bold", vjust = 0),
+    plot.title       = element_text(hjust = 0.5, face = "bold", size = 40),
+    plot.subtitle    = element_text(hjust = 0.5, size = 40),
+    panel.border     = element_rect(colour = "black", fill = NA, linewidth = 0.8)
+  )
