@@ -1,0 +1,314 @@
+cat gerador.444 
+#!/usr/bin/perl
+use strict;
+use warnings;
+use DBI;
+use File::Path qw(make_path);
+use File::Spec;
+use HTTP::Tiny;
+use JSON::PP qw(decode_json encode_json);
+use IO::Handle;
+
+# =========================
+# CONFIG
+# =========================
+my $db_name   = 'fy_tatu';
+my $db_host   = 'localhost';
+my $db_port   = 3306;
+my $db_user   = 'root';
+my $db_pass   = '';
+my $threshold = 0.75;
+my $outdir    = 'output';
+
+# =========================
+# LOG
+# =========================
+sub logmsg {
+    my ($msg) = @_;
+    print "[" . localtime() . "] $msg\n";
+}
+
+# =========================
+# AUX
+# =========================
+sub csv_escape {
+    my ($v) = @_;
+    $v = '' unless defined $v;
+    $v =~ s/"/""/g;
+    return qq{"$v"};
+}
+
+sub safe_filename {
+    my ($name) = @_;
+    $name =~ s#[/\\]#_#g;
+    return $name;
+}
+
+sub file_exists_nonempty {
+    my ($path) = @_;
+    return (-e $path && -s $path > 0);
+}
+
+sub strip_version {
+    my ($id) = @_;
+    $id =~ s/\.\d+$//;
+    return $id;
+}
+
+# =========================
+# BEST METRIC
+# =========================
+sub best_metric_name_and_value {
+    my ($r) = @_;
+
+    my %vals = (
+        'glmnet'       => $r->{ml_glmnet},
+        'glmnet_sem'   => $r->{semknn_glmnet},
+        'krls'         => $r->{ml_krlsRadial},
+        'krls_sem'     => $r->{semknn_krlsRadial},
+        'bst'          => $r->{ml_bstTree},
+        'bst_sem'      => $r->{semknn_bstTree},
+        'brnn'         => $r->{ml_brnn},
+        'brnn_sem'     => $r->{semknn_brnn},
+    );
+
+    my ($best_k, $best_v);
+
+    for my $k (keys %vals) {
+        next unless defined $vals{$k};
+        if (!defined $best_v || $vals{$k} > $best_v) {
+            $best_v = $vals{$k};
+            $best_k = $k;
+        }
+    }
+
+    return ($best_k, defined $best_v ? $best_v : '');
+}
+
+# =========================
+# CACHE
+# =========================
+sub load_cache {
+    my ($file) = @_;
+    return {} unless -e $file;
+
+    open my $fh, '<', $file;
+    local $/;
+    my $json = <$fh>;
+    close $fh;
+
+    return {} unless $json;
+
+    my $d = eval { decode_json($json) };
+    return ref $d eq 'HASH' ? $d : {};
+}
+
+sub save_cache {
+    my ($file, $c) = @_;
+    open my $fh, '>', $file;
+    print $fh encode_json($c);
+    close $fh;
+}
+
+# =========================
+# HTTP
+# =========================
+sub ensembl_get {
+    my ($http, $path) = @_;
+
+    my $url = "https://rest.ensembl.org$path";
+
+    my $res = $http->get($url, {
+        headers => {
+            'Content-Type' => 'application/json',
+            'Accept'       => 'application/json',
+        }
+    });
+
+    return (undef, "http_" . ($res->{status} // 'err'))
+        unless $res->{success};
+
+    my $obj = eval { decode_json($res->{content}) };
+    return (undef, "json_error") if $@;
+
+    return ($obj, 'ok');
+}
+
+# =========================
+# GENE LOOKUP
+# =========================
+sub get_gene {
+    my ($tr, $cache, $http) = @_;
+
+    return @{$cache->{$tr}}{qw/gene_id gene_symbol status/}
+        if exists $cache->{$tr};
+
+    my $stable = strip_version($tr);
+
+    my ($tr_obj, $s1) = ensembl_get($http, "/lookup/id/$stable?");
+    my ($gene_id, $symbol, $status) = ('', '', $s1);
+
+    if ($tr_obj) {
+        $gene_id = $tr_obj->{Parent} // '';
+
+        if ($gene_id) {
+            my ($g_obj, $s2) = ensembl_get($http, "/lookup/id/$gene_id?");
+            $status = $s2;
+
+            if ($g_obj) {
+                $symbol = $g_obj->{display_name} // '';
+            }
+        }
+    }
+
+    $cache->{$tr} = {
+        gene_id     => $gene_id,
+        gene_symbol => $symbol,
+        status      => $status,
+    };
+
+    return ($gene_id, $symbol, $status);
+}
+
+# =========================
+# INIT
+# =========================
+make_path($outdir);
+
+logmsg("Conectando MySQL...");
+my $dbh = DBI->connect(
+    "DBI:mysql:database=$db_name;host=$db_host",
+    $db_user,
+    $db_pass,
+    { RaiseError => 1 }
+);
+
+my $http = HTTP::Tiny->new(timeout => 30);
+
+my $cache_file = "$outdir/gene_cache.json";
+my $cache = load_cache($cache_file);
+
+# =========================
+# SAMPLES
+# =========================
+logmsg("Carregando samples...");
+my (%samples, @order);
+
+my $sth = $dbh->prepare("SELECT sample,age,sex FROM tatu_samples");
+$sth->execute();
+
+while (my $r = $sth->fetchrow_hashref) {
+    $samples{$r->{sample}} = $r;
+    push @order, $r->{sample};
+}
+
+logmsg("Samples: " . scalar(@order));
+
+# =========================
+# TRANSCRIPTS
+# =========================
+logmsg("Buscando transcripts...");
+
+my $sth_tr = $dbh->prepare(q{
+SELECT
+ name,
+ glmnet AS ml_glmnet,
+ NULL AS semknn_glmnet,
+ krlsRadial AS ml_krlsRadial,
+ NULL AS semknn_krlsRadial,
+ bstTree AS ml_bstTree,
+ NULL AS semknn_bstTree,
+ brnn AS ml_brnn,
+ NULL AS semknn_brnn
+FROM tatu_ml
+});
+
+$sth_tr->execute();
+
+my @trs;
+while (my $r = $sth_tr->fetchrow_hashref) {
+    my ($k,$v)=best_metric_name_and_value($r);
+    push @trs, {name=>$r->{name},v=>$v,k=>$k} if $v >= $threshold;
+}
+
+my $total = @trs;
+logmsg("Selecionados: $total");
+
+# =========================
+# INDEX
+# =========================
+open my $idx, '>', "$outdir/index.csv";
+$idx->autoflush(1);
+
+print $idx "transcript,gene_id,gene_symbol,status,max,model,cpgs,csv\n";
+
+# =========================
+# CPG
+# =========================
+my $sth_cpg = $dbh->prepare("SELECT cpgs FROM tatu_cpg_groups WHERE name=?");
+
+# =========================
+# LOOP
+# =========================
+for my $i (0..$#trs) {
+
+    my $t = $trs[$i];
+    my $n = $i+1;
+
+    logmsg("[$n/$total] $t->{name}");
+
+    my ($gid,$gsym,$gstat)=get_gene($t->{name},$cache,$http);
+
+    logmsg("[$n/$total] gene=$gid symbol=$gsym status=$gstat");
+
+    $sth_cpg->execute($t->{name});
+    my ($cpgs)= $sth_cpg->fetchrow_array();
+
+    my @cpg = split /,/, ($cpgs//'');
+
+    my $file = "$outdir/" . safe_filename($t->{name}) . ".csv";
+
+    my $csv_status;
+
+    if (file_exists_nonempty($file)) {
+        $csv_status='skip';
+    } else {
+
+        my $ph = join(',', ('?') x @cpg);
+
+        my $sth_b = $dbh->prepare("SELECT sample,cpg,value FROM tatu_betas WHERE cpg IN ($ph)");
+        $sth_b->execute(@cpg);
+
+        my %b;
+        while(my $r=$sth_b->fetchrow_hashref){
+            $b{$r->{sample}}{$r->{cpg}}=$r->{value};
+        }
+
+        open my $fh,'>',$file;
+
+        print $fh join(',', 'sample','sex','age',@cpg)."\n";
+
+        for my $s (@order){
+            print $fh join(',',
+                $s,
+                $samples{$s}{sex},
+                $samples{$s}{age},
+                map { $b{$s}{$_}//'' } @cpg
+            )."\n";
+        }
+
+        close $fh;
+        $csv_status='written';
+    }
+
+    print $idx join(',',
+        $t->{name},$gid,$gsym,$gstat,$t->{v},$t->{k},scalar(@cpg),$csv_status
+    )."\n";
+
+    save_cache($cache_file,$cache);
+}
+
+close $idx;
+$dbh->disconnect;
+
+logmsg("Finalizado.");
