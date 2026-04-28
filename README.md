@@ -17,7 +17,7 @@ The table below was generated using **ugPlot**, an open-source R/Shiny framework
 https://doi.org/10.5281/zenodo.19824653
 
 ## Epitage table
-<table style="font-size:9px; line-height:1.25; border-collapse:collapse;">
+<table style="font-size:9px; line-height:1; border-collapse:collapse;">
   <thead>
     <tr>
       <th>Type</th>
