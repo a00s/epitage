@@ -21,11 +21,9 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 
 ## Epitage transcript cards
 
-<table>
-<tr>
-<td valign="top" width="100%">
+<div style="display: grid; gap: 20px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));">
 
-<table>
+<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
 <tr><td colspan="2"><b>ELOVL2</b><br><sub>ENST00000456616.2<br>ENST00000667154.1<br>ENST00000657744.1</sub></td></tr>
 <tr><td><b>Best CpG / Spearman</b></td><td>cg16867657 0.95<br>cg21572722 0.92<br>cg24724428 0.87</td></tr>
@@ -38,12 +36,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 <tr><td><b>Max R² scramble age</b></td><td>0.06</td></tr>
 </table>
 
-</td>
-</tr>
-<tr>
-<td valign="top" width="100%">
-
-<table>
+<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
 <tr><td colspan="2"><b>ELOVL2</b><br><sub>ENST00000354666.4</sub></td></tr>
 <tr><td><b>Best CpG / Spearman</b></td><td>cg16867657 0.95<br>cg24724428 0.87<br>cg21572722 0.92</td></tr>
@@ -56,12 +49,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 <tr><td><b>Max R² scramble age</b></td><td>0.05</td></tr>
 </table>
 
-</td>
-</tr>
-<tr>
-<td valign="top" width="100%">
-
-<table>
+<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
 <tr><td colspan="2"><b>ELOVL2</b><br><sub>ENST00000667435.1<br>ENST00000607275.6</sub></td></tr>
 <tr><td><b>Best CpG / Spearman</b></td><td>cg16867657 0.95<br>cg24724428 0.87<br>cg21572722 0.92</td></tr>
@@ -74,12 +62,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 <tr><td><b>Max R² scramble age</b></td><td>0.04</td></tr>
 </table>
 
-</td>
-</tr>
-<tr>
-<td valign="top" width="100%">
-
-<table>
+<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
 <tr><td colspan="2"><b>FHL2</b><br><sub>ENST00000409177.6</sub></td></tr>
 <tr><td><b>Best CpG / Spearman</b></td><td>cg06639320 0.93<br>cg24079702 0.90<br>cg22454769 0.92</td></tr>
@@ -92,12 +75,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 <tr><td><b>Max R² scramble age</b></td><td>0.04</td></tr>
 </table>
 
-</td>
-</tr>
-<tr>
-<td valign="top" width="100%">
-
-<table>
+<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
 <tr><td colspan="2"><b>FHL2</b><br><sub>ENST00000393353.7<br>ENST00000344213.9<br>ENST00000530340.6<br>ENST00000358129.8<br>ENST00000408995.5<br>ENST00000322142.13</sub></td></tr>
 <tr><td><b>Best CpG / Spearman</b></td><td>cg24079702 0.90<br>cg22454769 0.92<br>cg06639320 0.93</td></tr>
@@ -110,12 +88,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 <tr><td><b>Max R² scramble age</b></td><td>0.04</td></tr>
 </table>
 
-</td>
-</tr>
-<tr>
-<td valign="top" width="100%">
-
-<table>
+<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
 <tr><td colspan="2"><b>TRIM59</b><br><sub>ENST00000471155.5<br>ENST00000483754.1<br>ENST00000471396.1<br>ENST00000479460.5<br>ENST00000309784.9</sub></td></tr>
 <tr><td><b>Best CpG / Spearman</b></td><td>cg07553761 0.89</td></tr>
@@ -128,12 +101,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 <tr><td><b>Max R² scramble age</b></td><td>0.06</td></tr>
 </table>
 
-</td>
-</tr>
-<tr>
-<td valign="top" width="100%">
-
-<table>
+<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
 <tr><td colspan="2"><img alt="ML centered" src="https://img.shields.io/badge/ML_centered-orange?style=flat-square"></td></tr>
 <tr><td colspan="2"><b>OBSCN</b><br><sub>ENST00000422127.5<br>ENST00000680850.1<br>ENST00000570156.7</sub></td></tr>
 <tr><td><b>Best CpG / Spearman</b></td><td>cg04193160 0.76<br>cg00251125 -0.73<br>cg19261426 -0.72</td></tr>
@@ -146,12 +114,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 <tr><td><b>Max R² scramble age</b></td><td>0.06</td></tr>
 </table>
 
-</td>
-</tr>
-<tr>
-<td valign="top" width="100%">
-
-<table>
+<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
 <tr><td colspan="2"><b>MIR29B2CHG</b><br><sub>ENST00000655169.1</sub></td></tr>
 <tr><td><b>Best CpG / Spearman</b></td><td>cg10501210 -0.86<br>(negative)</td></tr>
@@ -164,12 +127,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 <tr><td><b>Max R² scramble age</b></td><td>0.04</td></tr>
 </table>
 
-</td>
-</tr>
-<tr>
-<td valign="top" width="100%">
-
-<table>
+<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
 <tr><td colspan="2"><b>TRIM59</b><br><sub>ENST00000543469.1</sub></td></tr>
 <tr><td><b>Best CpG / Spearman</b></td><td>cg07553761 0.89</td></tr>
@@ -182,12 +140,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 <tr><td><b>Max R² scramble age</b></td><td>0.04</td></tr>
 </table>
 
-</td>
-</tr>
-<tr>
-<td valign="top" width="100%">
-
-<table>
+<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
 <tr><td colspan="2"><b>TRIM59</b><br><sub>ENST00000494486.1</sub></td></tr>
 <tr><td><b>Best CpG / Spearman</b></td><td>cg07553761 0.89</td></tr>
@@ -200,12 +153,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 <tr><td><b>Max R² scramble age</b></td><td>0.05</td></tr>
 </table>
 
-</td>
-</tr>
-<tr>
-<td valign="top" width="100%">
-
-<table>
+<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
 <tr><td colspan="2"><b>TRIM59</b><br><sub>ENST00000496222.1</sub></td></tr>
 <tr><td><b>Best CpG / Spearman</b></td><td>cg07553761 0.89</td></tr>
@@ -218,12 +166,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 <tr><td><b>Max R² scramble age</b></td><td>0.03</td></tr>
 </table>
 
-</td>
-</tr>
-<tr>
-<td valign="top" width="100%">
-
-<table>
+<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
 <tr><td colspan="2"><b>MIR29B2CHG</b><br><sub>ENST00000487977.2<br>ENST00000652846.1<br>ENST00000702741.1</sub></td></tr>
 <tr><td><b>Best CpG / Spearman</b></td><td>cg10501210 -0.86<br>(negative)</td></tr>
@@ -236,12 +179,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 <tr><td><b>Max R² scramble age</b></td><td>0.03</td></tr>
 </table>
 
-</td>
-</tr>
-<tr>
-<td valign="top" width="100%">
-
-<table>
+<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
 <tr><td colspan="2"><img alt="ML centered" src="https://img.shields.io/badge/ML_centered-orange?style=flat-square"></td></tr>
 <tr><td colspan="2"><b>OBSCN</b><br><sub>ENST00000636476.2</sub></td></tr>
 <tr><td><b>Best CpG / Spearman</b></td><td>cg04193160 0.76<br>cg19261426 -0.72</td></tr>
@@ -254,12 +192,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 <tr><td><b>Max R² scramble age</b></td><td>0.04</td></tr>
 </table>
 
-</td>
-</tr>
-<tr>
-<td valign="top" width="100%">
-
-<table>
+<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
 <tr><td colspan="2"><b>KLF14</b><br><sub>ENST00000583337.4</sub></td></tr>
 <tr><td><b>Best CpG / Spearman</b></td><td>cg08097417 0.83<br>cg07955995 0.83</td></tr>
@@ -272,12 +205,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 <tr><td><b>Max R² scramble age</b></td><td>0.05</td></tr>
 </table>
 
-</td>
-</tr>
-<tr>
-<td valign="top" width="100%">
-
-<table>
+<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
 <tr><td colspan="2"><img alt="ML centered" src="https://img.shields.io/badge/ML_centered-orange?style=flat-square"></td></tr>
 <tr><td colspan="2"><b>PRRT1</b><br><sub>ENST00000472641.1</sub></td></tr>
 <tr><td><b>Best CpG / Spearman</b></td><td>cg24125828 0.75<br>cg13782301 0.74<br>cg18501647 0.73<br>cg14757228 0.73<br>cg27067781 0.73<br>cg11945824 0.72<br>cg22897615 0.70</td></tr>
@@ -290,12 +218,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 <tr><td><b>Max R² scramble age</b></td><td>0.04</td></tr>
 </table>
 
-</td>
-</tr>
-<tr>
-<td valign="top" width="100%">
-
-<table>
+<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
 <tr><td colspan="2"><img alt="ML centered" src="https://img.shields.io/badge/ML_centered-orange?style=flat-square"></td></tr>
 <tr><td colspan="2"><b>PRRT1</b><br><sub>ENST00000375150.6</sub></td></tr>
 <tr><td><b>Best CpG / Spearman</b></td><td>cg24125828 0.76<br>cg13782301 0.74<br>cg14757228 0.73<br>cg18501647 0.73<br>cg27067781 0.73<br>cg11945824 0.72<br>cg22897615 0.70</td></tr>
@@ -308,12 +231,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 <tr><td><b>Max R² scramble age</b></td><td>0.05</td></tr>
 </table>
 
-</td>
-</tr>
-<tr>
-<td valign="top" width="100%">
-
-<table>
+<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
 <tr><td colspan="2"><img alt="ML centered" src="https://img.shields.io/badge/ML_centered-orange?style=flat-square"></td></tr>
 <tr><td colspan="2"><b>OBSCN</b><br><sub>ENST00000662438.1</sub></td></tr>
 <tr><td><b>Best CpG / Spearman</b></td><td>cg04193160 0.76<br>cg19261426 -0.72</td></tr>
@@ -326,12 +244,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 <tr><td><b>Max R² scramble age</b></td><td>0.07</td></tr>
 </table>
 
-</td>
-</tr>
-<tr>
-<td valign="top" width="100%">
-
-<table>
+<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
 <tr><td colspan="2"><b>CALB1</b><br><sub>ENST00000518457.5</sub></td></tr>
 <tr><td><b>Best CpG / Spearman</b></td><td>cg26290632 0.88</td></tr>
@@ -344,12 +257,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 <tr><td><b>Max R² scramble age</b></td><td>0.05</td></tr>
 </table>
 
-</td>
-</tr>
-<tr>
-<td valign="top" width="100%">
-
-<table>
+<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
 <tr><td colspan="2"><b>CALB1</b><br><sub>ENST00000476853.1<br>ENST00000473670.1</sub></td></tr>
 <tr><td><b>Best CpG / Spearman</b></td><td>cg26290632 0.88</td></tr>
@@ -362,12 +270,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 <tr><td><b>Max R² scramble age</b></td><td>0.04</td></tr>
 </table>
 
-</td>
-</tr>
-<tr>
-<td valign="top" width="100%">
-
-<table>
+<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
 <tr><td colspan="2"><b>CALB1</b><br><sub>ENST00000265431.7</sub></td></tr>
 <tr><td><b>Best CpG / Spearman</b></td><td>cg26290632 0.88</td></tr>
@@ -380,12 +283,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 <tr><td><b>Max R² scramble age</b></td><td>0.02</td></tr>
 </table>
 
-</td>
-</tr>
-<tr>
-<td valign="top" width="100%">
-
-<table>
+<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
 <tr><td colspan="2"><b>CALB1</b><br><sub>ENST00000482702.5</sub></td></tr>
 <tr><td><b>Best CpG / Spearman</b></td><td>cg26290632 0.88</td></tr>
@@ -398,12 +296,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 <tr><td><b>Max R² scramble age</b></td><td>0.03</td></tr>
 </table>
 
-</td>
-</tr>
-<tr>
-<td valign="top" width="100%">
-
-<table>
+<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
 <tr><td colspan="2"><img alt="ML centered" src="https://img.shields.io/badge/ML_centered-orange?style=flat-square"></td></tr>
 <tr><td colspan="2"><b>PRRT1</b><br><sub>ENST00000211413.10</sub></td></tr>
 <tr><td><b>Best CpG / Spearman</b></td><td>cg24125828 0.76<br>cg13782301 0.74<br>cg14757228 0.73<br>cg18501647 0.73<br>cg27067781 0.73<br>cg11945824 0.72<br>cg22897615 0.70</td></tr>
@@ -416,12 +309,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 <tr><td><b>Max R² scramble age</b></td><td>0.05</td></tr>
 </table>
 
-</td>
-</tr>
-<tr>
-<td valign="top" width="100%">
-
-<table>
+<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
 <tr><td colspan="2"><img alt="ML centered" src="https://img.shields.io/badge/ML_centered-orange?style=flat-square"></td></tr>
 <tr><td colspan="2"><b>PRRT1</b><br><sub>ENST00000495191.5</sub></td></tr>
 <tr><td><b>Best CpG / Spearman</b></td><td>cg24125828 0.76<br>cg13782301 0.74<br>cg14757228 0.73<br>cg18501647 0.73<br>cg27067781 0.73<br>cg11945824 0.72<br>cg22897615 0.70</td></tr>
@@ -434,12 +322,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 <tr><td><b>Max R² scramble age</b></td><td>0.04</td></tr>
 </table>
 
-</td>
-</tr>
-<tr>
-<td valign="top" width="100%">
-
-<table>
+<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
 <tr><td colspan="2"><b>KCNS1</b><br><sub>ENST00000537075.3</sub></td></tr>
 <tr><td><b>Best CpG / Spearman</b></td><td>cg19702785 0.80</td></tr>
@@ -452,12 +335,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 <tr><td><b>Max R² scramble age</b></td><td>0.06</td></tr>
 </table>
 
-</td>
-</tr>
-<tr>
-<td valign="top" width="100%">
-
-<table>
+<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
 <tr><td colspan="2"><b>VTRNA1-2</b><br><sub>ENST00000689319.1</sub></td></tr>
 <tr><td><b>Best CpG / Spearman</b></td><td>cg23500537 0.87</td></tr>
@@ -470,12 +348,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 <tr><td><b>Max R² scramble age</b></td><td>0.03</td></tr>
 </table>
 
-</td>
-</tr>
-<tr>
-<td valign="top" width="100%">
-
-<table>
+<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
 <tr><td colspan="2"><b>OTUD7A</b><br><sub>ENST00000560598.2</sub></td></tr>
 <tr><td><b>Best CpG / Spearman</b></td><td>cg04875128 0.84<br>cg01763090 0.81</td></tr>
@@ -488,12 +361,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 <tr><td><b>Max R² scramble age</b></td><td>0.05</td></tr>
 </table>
 
-</td>
-</tr>
-<tr>
-<td valign="top" width="100%">
-
-<table>
+<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
 <tr><td colspan="2"><img alt="ML centered" src="https://img.shields.io/badge/ML_centered-orange?style=flat-square"></td></tr>
 <tr><td colspan="2"><b>PRRT1</b><br><sub>ENST00000467780.5</sub></td></tr>
 <tr><td><b>Best CpG / Spearman</b></td><td>cg24125828 0.74<br>cg13782301 0.74<br>cg18501647 0.73<br>cg14757228 0.73<br>cg27067781 0.72<br>cg11945824 0.71</td></tr>
@@ -506,12 +374,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 <tr><td><b>Max R² scramble age</b></td><td>0.06</td></tr>
 </table>
 
-</td>
-</tr>
-<tr>
-<td valign="top" width="100%">
-
-<table>
+<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
 <tr><td colspan="2"><b>SYNGR3</b><br><sub>ENST00000248121.7</sub></td></tr>
 <tr><td><b>Best CpG / Spearman</b></td><td>cg11220950 0.81</td></tr>
@@ -524,12 +387,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 <tr><td><b>Max R² scramble age</b></td><td>0.03</td></tr>
 </table>
 
-</td>
-</tr>
-<tr>
-<td valign="top" width="100%">
-
-<table>
+<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
 <tr><td colspan="2"><img alt="ML centered" src="https://img.shields.io/badge/ML_centered-orange?style=flat-square"></td></tr>
 <tr><td colspan="2"><b>SPTBN4</b><br><sub>ENST00000352632.7</sub></td></tr>
 <tr><td><b>Best CpG / Spearman</b></td><td>cg05764628 0.69<br>cg02997982 0.68<br>cg17768491 0.68<br>cg09381003 0.68<br>cg02576468 0.68</td></tr>
@@ -542,9 +400,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 <tr><td><b>Max R² scramble age</b></td><td>0.03</td></tr>
 </table>
 
-</td>
-</tr>
-</table>
+</div>
 
 ## Citation
 
