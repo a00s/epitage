@@ -23,7 +23,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 
 <table>
 <tr>
-<td valign="top" width="50%">
+<td valign="top" width="100%">
 
 <table>
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
@@ -39,7 +39,9 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 </table>
 
 </td>
-<td valign="top" width="50%">
+</tr>
+<tr>
+<td valign="top" width="100%">
 
 <table>
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
@@ -57,7 +59,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 </td>
 </tr>
 <tr>
-<td valign="top" width="50%">
+<td valign="top" width="100%">
 
 <table>
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
@@ -73,7 +75,9 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 </table>
 
 </td>
-<td valign="top" width="50%">
+</tr>
+<tr>
+<td valign="top" width="100%">
 
 <table>
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
@@ -91,7 +95,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 </td>
 </tr>
 <tr>
-<td valign="top" width="50%">
+<td valign="top" width="100%">
 
 <table>
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
@@ -107,7 +111,9 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 </table>
 
 </td>
-<td valign="top" width="50%">
+</tr>
+<tr>
+<td valign="top" width="100%">
 
 <table>
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
@@ -125,7 +131,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 </td>
 </tr>
 <tr>
-<td valign="top" width="50%">
+<td valign="top" width="100%">
 
 <table>
 <tr><td colspan="2"><img alt="ML centered" src="https://img.shields.io/badge/ML_centered-orange?style=flat-square"></td></tr>
@@ -141,7 +147,9 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 </table>
 
 </td>
-<td valign="top" width="50%">
+</tr>
+<tr>
+<td valign="top" width="100%">
 
 <table>
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
@@ -159,7 +167,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 </td>
 </tr>
 <tr>
-<td valign="top" width="50%">
+<td valign="top" width="100%">
 
 <table>
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
@@ -175,7 +183,9 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 </table>
 
 </td>
-<td valign="top" width="50%">
+</tr>
+<tr>
+<td valign="top" width="100%">
 
 <table>
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
@@ -193,7 +203,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 </td>
 </tr>
 <tr>
-<td valign="top" width="50%">
+<td valign="top" width="100%">
 
 <table>
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
@@ -209,7 +219,9 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 </table>
 
 </td>
-<td valign="top" width="50%">
+</tr>
+<tr>
+<td valign="top" width="100%">
 
 <table>
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
@@ -227,7 +239,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 </td>
 </tr>
 <tr>
-<td valign="top" width="50%">
+<td valign="top" width="100%">
 
 <table>
 <tr><td colspan="2"><img alt="ML centered" src="https://img.shields.io/badge/ML_centered-orange?style=flat-square"></td></tr>
@@ -243,7 +255,9 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 </table>
 
 </td>
-<td valign="top" width="50%">
+</tr>
+<tr>
+<td valign="top" width="100%">
 
 <table>
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
@@ -261,7 +275,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 </td>
 </tr>
 <tr>
-<td valign="top" width="50%">
+<td valign="top" width="100%">
 
 <table>
 <tr><td colspan="2"><img alt="ML centered" src="https://img.shields.io/badge/ML_centered-orange?style=flat-square"></td></tr>
@@ -277,7 +291,9 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 </table>
 
 </td>
-<td valign="top" width="50%">
+</tr>
+<tr>
+<td valign="top" width="100%">
 
 <table>
 <tr><td colspan="2"><img alt="ML centered" src="https://img.shields.io/badge/ML_centered-orange?style=flat-square"></td></tr>
@@ -295,7 +311,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 </td>
 </tr>
 <tr>
-<td valign="top" width="50%">
+<td valign="top" width="100%">
 
 <table>
 <tr><td colspan="2"><img alt="ML centered" src="https://img.shields.io/badge/ML_centered-orange?style=flat-square"></td></tr>
@@ -311,7 +327,9 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 </table>
 
 </td>
-<td valign="top" width="50%">
+</tr>
+<tr>
+<td valign="top" width="100%">
 
 <table>
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
@@ -329,7 +347,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 </td>
 </tr>
 <tr>
-<td valign="top" width="50%">
+<td valign="top" width="100%">
 
 <table>
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
@@ -345,7 +363,9 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 </table>
 
 </td>
-<td valign="top" width="50%">
+</tr>
+<tr>
+<td valign="top" width="100%">
 
 <table>
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
@@ -363,7 +383,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 </td>
 </tr>
 <tr>
-<td valign="top" width="50%">
+<td valign="top" width="100%">
 
 <table>
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
@@ -379,7 +399,9 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 </table>
 
 </td>
-<td valign="top" width="50%">
+</tr>
+<tr>
+<td valign="top" width="100%">
 
 <table>
 <tr><td colspan="2"><img alt="ML centered" src="https://img.shields.io/badge/ML_centered-orange?style=flat-square"></td></tr>
@@ -397,7 +419,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 </td>
 </tr>
 <tr>
-<td valign="top" width="50%">
+<td valign="top" width="100%">
 
 <table>
 <tr><td colspan="2"><img alt="ML centered" src="https://img.shields.io/badge/ML_centered-orange?style=flat-square"></td></tr>
@@ -413,7 +435,9 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 </table>
 
 </td>
-<td valign="top" width="50%">
+</tr>
+<tr>
+<td valign="top" width="100%">
 
 <table>
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
@@ -431,7 +455,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 </td>
 </tr>
 <tr>
-<td valign="top" width="50%">
+<td valign="top" width="100%">
 
 <table>
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
@@ -447,7 +471,9 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 </table>
 
 </td>
-<td valign="top" width="50%">
+</tr>
+<tr>
+<td valign="top" width="100%">
 
 <table>
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
@@ -465,7 +491,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 </td>
 </tr>
 <tr>
-<td valign="top" width="50%">
+<td valign="top" width="100%">
 
 <table>
 <tr><td colspan="2"><img alt="ML centered" src="https://img.shields.io/badge/ML_centered-orange?style=flat-square"></td></tr>
@@ -481,7 +507,9 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 </table>
 
 </td>
-<td valign="top" width="50%">
+</tr>
+<tr>
+<td valign="top" width="100%">
 
 <table>
 <tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
@@ -499,7 +527,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 </td>
 </tr>
 <tr>
-<td valign="top" width="50%">
+<td valign="top" width="100%">
 
 <table>
 <tr><td colspan="2"><img alt="ML centered" src="https://img.shields.io/badge/ML_centered-orange?style=flat-square"></td></tr>
@@ -513,11 +541,6 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 <tr><td><b>Median MAE</b></td><td>8.66 (IQR 0.67)</td></tr>
 <tr><td><b>Max R² scramble age</b></td><td>0.03</td></tr>
 </table>
-
-</td>
-<td valign="top" width="50%">
-
-
 
 </td>
 </tr>
