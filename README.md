@@ -17,7 +17,7 @@ The table below was generated using **ugPlot**, an open-source R/Shiny framework
 https://doi.org/10.5281/zenodo.19824653
 
 ## Epitage table
-
+<small>
 | Best result | Gene | Transcripts | Spearman | cpgs | samples | Model (best seed) | Median R² | Min R² | Max R² | Median MAE | Max R² scramble age |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | CpG centered | ELOVL2 | ENST00000456616.2<br>ENST00000667154.1<br>ENST00000657744.1 | cg16867657 0.95<br>cg21572722 0.92<br>cg24724428 0.87 | 7 | 714 | bagEarthGCV(243:1) | 0.93 (IQR 0.01) | 0.88 | 0.95 | 4.41 (IQR 0.36) | 0.06 |
@@ -49,7 +49,7 @@ https://doi.org/10.5281/zenodo.19824653
 | ML centered | PRRT1 | ENST00000467780.5 | cg24125828 0.74<br>cg13782301 0.74<br>cg18501647 0.73<br>cg14757228 0.73<br>cg27067781 0.72<br>cg11945824 0.71 | 41 | 686 | brnn(3178:1) |  0.77 (IQR 0.04) | 0.65 | 0.86 | 7.82 (IQR 0.64) | 0.06 |
 | CpG centered | SYNGR3 | ENST00000248121.7 | cg11220950 0.81 | 12 | 714 | cubist(268:45) | 0.77 (IQR 0.05) | 0.63 | 0.85 | 7.8 (IQR 0.71) | 0.03 |
 | ML centered | SPTBN4 | ENST00000352632.7 | cg05764628 0.69<br>cg02997982 0.68<br>cg17768491 0.68<br>cg09381003 0.68<br>cg02576468 0.68 | 42 | 682 | bagEarthGCV(3523:1) |  0.73 (IQR 0.04) | 0.6 | 0.83 | 8.66 (IQR 0.67) | 0.03 |
-
+</small>
 ## Citation
 
 *A machine learning approach to identify key Epigenetic Transcripts for Ageing research in human blood (Epitage).*  
