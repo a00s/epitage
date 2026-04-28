@@ -17,13 +17,13 @@ The table below was generated using **ugPlot**, an open-source R/Shiny framework
 https://doi.org/10.5281/zenodo.19824653
 
 ## Epitage table
-<table style="font-size:9px; line-height:1; border-collapse:collapse;">
+<table style="font-size:8px; line-height:1; border-collapse:collapse;">
   <thead>
     <tr>
       <th>Type</th>
       <th>Gene</th>
       <th>Transcript</th>
-      <th>Best CpG</th>
+      <th>Best CpG (spearman)</th>
       <th>CpGs</th>
       <th>Samples</th>
       <th>Best model</th>
@@ -97,6 +97,7 @@ https://doi.org/10.5281/zenodo.19824653
     </tr>
   </tbody>
 </table>
+
 ## Citation
 
 *A machine learning approach to identify key Epigenetic Transcripts for Ageing research in human blood (Epitage).*  
