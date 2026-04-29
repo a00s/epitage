@@ -54,14 +54,14 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 | ![ML centered](https://img.shields.io/badge/ML_centered-orange?style=flat-square) | OBSCN | ENST00000662438.1 | 0.76 | 0.8 | 55 | 714 |
 | ![CpG centered](https://img.shields.io/badge/CpG_centered-blue?style=flat-square) | KCNS1 | ENST00000537075.3 | 0.8 | 0.78 | 12 | 713 |
 | ![CpG centered](https://img.shields.io/badge/CpG_centered-blue?style=flat-square) | SLC1A6 | ENST00000430939.6 | 0.78 | 0.72 | 14 | 714 |
-| ![CpG centered](https://img.shields.io/badge/CpG_centered-blue?style=flat-square) | TEKTL1 | ENST00000292574.4 | 0.78 | 0.72 | — | — |
+| ![CpG centered](https://img.shields.io/badge/CpG_centered-blue?style=flat-square) | TEKTL1 | ENST00000292574.4 | 0.78 | 0.72 | 13 | 714 |
 | ![ML centered](https://img.shields.io/badge/ML_centered-orange?style=flat-square) | RNF180 | ENST00000504296.1 | 0.63 | 0.77 | 8 | 714 |
 | ![ML centered](https://img.shields.io/badge/ML_centered-orange?style=flat-square) | PRRT1 | ENST00000467780.5 | 0.74 | 0.77 | 41 | 686 |
 | ![CpG centered](https://img.shields.io/badge/CpG_centered-blue?style=flat-square) | FOXG1-AS1 | ENST00000546560.5 | 0.77 | 0.71 | 12 | 683 |
 | ![CpG centered](https://img.shields.io/badge/CpG_centered-blue?style=flat-square) | TP73 | ENST00000354437.8 | 0.74 | 0.71 | 27 | 714 |
 | ![ML centered](https://img.shields.io/badge/ML_centered-orange?style=flat-square) | SPTBN4 | ENST00000352632.7 | 0.69 | 0.73 | 42 | 682 |
 | ![ML centered](https://img.shields.io/badge/ML_centered-orange?style=flat-square) | CACNA1G | ENST00000359106.10 | 0.7 | 0.75 | 41 | 714 |
-| ![CpG & ML](https://img.shields.io/badge/CpG_&_ML-purple?style=flat-square) | PPM1N | ENST00000415077.1 | 0.66 | 0.66 | — | — |
+| ![CpG & ML](https://img.shields.io/badge/CpG_&_ML-purple?style=flat-square) | PPM1N | ENST00000415077.1 | 0.66 | 0.66 | 11 | 714 |
 | — | ZIK1 | ENST00000597219.1 | 0.82 | — | — | — |
 | — | CELF6 | ENST00000567083.2 | 0.81 | — | — | — |
 | — | CACNA1G | ENST00000442258.6 | 0.7 | — | — | — |
