@@ -14,12 +14,22 @@ DOI: https://doi.org/10.64898/2026.02.09.704870
 This table was generated using **ugPlot**, an open-source R/Shiny framework for machine-learning testing, model comparison, and methylation data exploration.  
 Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 
-## Card legend
+<style>
+table {
+  vertical-align: top;
+}
+table td {
+  vertical-align: top;
+}
+</style>
+
+## Legend
 
 | Type | Description |
 |------|-------------|
 | ![CpG centered](https://img.shields.io/badge/CpG_centered-blue?style=flat-square) | Entries are mainly explained by a dominant CpG signal. |
 | ![ML centered](https://img.shields.io/badge/ML_centered-orange?style=flat-square) | Entries show stronger transcript-level performance when multiple CpGs are analysed together. |
+| ![CpG & ML](https://img.shields.io/badge/CpG_&_ML-purple?style=flat-square) | Entries combining both CpG-centered and ML-centered signals. |
 
 ## Epitage transcript rankings
 
@@ -29,8 +39,8 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 | ![CpG centered](https://img.shields.io/badge/CpG_centered-blue?style=flat-square) | ELOVL2 | ENST00000354666.4 | 0.95 | 0.92 | 7 | 714 |
 | ![CpG centered](https://img.shields.io/badge/CpG_centered-blue?style=flat-square) | ELOVL2 | ENST00000667435.1<br>ENST00000607275.6 | 0.95 | 0.92 | 8 | 714 |
 | ![CpG centered](https://img.shields.io/badge/CpG_centered-blue?style=flat-square) | FHL2 | ENST00000409177.6 | 0.93 | 0.9 | 9 | 714 |
-| ![CpG centered](https://img.shields.io/badge/CpG_centered-blue?style=flat-square) | FHL2 | ENST00000393353.7<br>ENST00000344213.9<br>ENST00000530340.6<br>ENST00000358129.8<br>ENST00000408995.5<br>ENST00000322142.13 | 0.93 | 0.9 | 18 | 714 |
-| ![CpG centered](https://img.shields.io/badge/CpG_centered-blue?style=flat-square) | TRIM59 | ENST00000471155.5<br>ENST00000483754.1<br>ENST00000471396.1<br>ENST00000479460.5<br>ENST00000309784.9 | 0.89 | 0.83 | 14 | 636 |
+| ![CpG centered](https://img.shields.io/badge/CpG_centered-blue?style=flat-square) | FHL2 | ENST00000393353.7<br>ENST00000344213.9<br>ENST00000530340.6<br>ENST00000358129.8<br>ENST00000408995.5<br>EN[...]
+| ![CpG centered](https://img.shields.io/badge/CpG_centered-blue?style=flat-square) | TRIM59 | ENST00000471155.5<br>ENST00000483754.1<br>ENST00000471396.1<br>ENST00000479460.5<br>ENST00000309784.9 | 0[...]
 | ![CpG centered](https://img.shields.io/badge/CpG_centered-blue?style=flat-square) | TRIM59 | ENST00000543469.1 | 0.89 | 0.81 | 13 | 714 |
 | ![CpG centered](https://img.shields.io/badge/CpG_centered-blue?style=flat-square) | TRIM59 | ENST00000494486.1 | 0.89 | 0.81 | 13 | 714 |
 | ![CpG centered](https://img.shields.io/badge/CpG_centered-blue?style=flat-square) | TRIM59 | ENST00000496222.1 | 0.89 | 0.81 | 14 | 636 |
