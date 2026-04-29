@@ -19,388 +19,464 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 <img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"> entries are mainly explained by a dominant CpG signal.  
 <img alt="ML centered" src="https://img.shields.io/badge/ML_centered-orange?style=flat-square"> entries show stronger transcript-level performance when multiple CpGs are analysed together.
 
-## Epitage transcript cards
+## Epitage transcript rankings
 
-<div style="display: grid; gap: 20px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));">
+<style>
+  .epitage-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .epitage-table thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .epitage-table thead th {
+    padding: 16px;
+    text-align: left;
+    border: none;
+  }
+  .epitage-table tbody tr {
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.2s ease;
+  }
+  .epitage-table tbody tr:hover {
+    background-color: #f8f9ff;
+  }
+  .epitage-table tbody td {
+    padding: 14px 16px;
+    border: none;
+  }
+  .epitage-table tbody tr:last-child {
+    border-bottom: none;
+  }
+  .badge-cpg {
+    display: inline-block;
+    background: #3b82f6;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 8px;
+  }
+  .badge-ml {
+    display: inline-block;
+    background: #f97316;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 8px;
+  }
+  .badge-both {
+    display: inline-block;
+    background: #8b5cf6;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 8px;
+  }
+  .gene-name {
+    font-weight: 600;
+    color: #1f2937;
+  }
+  .transcript-list {
+    font-size: 12px;
+    color: #6b7280;
+    margin-top: 4px;
+    font-family: monospace;
+  }
+  .metric-excellent {
+    color: #059669;
+    font-weight: 600;
+  }
+  .metric-good {
+    color: #2563eb;
+    font-weight: 600;
+  }
+  .metric-fair {
+    color: #f59e0b;
+    font-weight: 600;
+  }
+</style>
 
-<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-<tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
-<tr><td colspan="2"><b>ELOVL2</b><br><sub>ENST00000456616.2<br>ENST00000667154.1<br>ENST00000657744.1</sub></td></tr>
-<tr><td><b>Best CpG / Spearman</b></td><td>cg16867657 0.95<br>cg21572722 0.92<br>cg24724428 0.87</td></tr>
-<tr><td><b>CpGs</b></td><td>7</td></tr>
-<tr><td><b>Samples</b></td><td>714</td></tr>
-<tr><td><b>Best model</b></td><td><code>bagEarthGCV(243:1)</code></td></tr>
-<tr><td><b>Median R²</b></td><td>0.93 (IQR 0.01)</td></tr>
-<tr><td><b>R² range</b></td><td>0.88–0.95</td></tr>
-<tr><td><b>Median MAE</b></td><td>4.41 (IQR 0.36)</td></tr>
-<tr><td><b>Max R² scramble age</b></td><td>0.06</td></tr>
+<table class="epitage-table">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Gene</th>
+      <th>Transcripts</th>
+      <th>Best CpG Spearman</th>
+      <th>Median ML R²</th>
+      <th>CpGs</th>
+      <th>Samples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="badge-cpg">CpG</span></td>
+      <td class="gene-name">ELOVL2</td>
+      <td><div class="transcript-list">ENST00000456616.2<br>ENST00000667154.1<br>ENST00000657744.1</div></td>
+      <td><span class="metric-excellent">0.95</span></td>
+      <td><span class="metric-excellent">0.93</span></td>
+      <td>7</td>
+      <td>714</td>
+    </tr>
+    <tr>
+      <td><span class="badge-cpg">CpG</span></td>
+      <td class="gene-name">ELOVL2</td>
+      <td><div class="transcript-list">ENST00000354666.4</div></td>
+      <td><span class="metric-excellent">0.95</span></td>
+      <td><span class="metric-excellent">0.92</span></td>
+      <td>7</td>
+      <td>714</td>
+    </tr>
+    <tr>
+      <td><span class="badge-cpg">CpG</span></td>
+      <td class="gene-name">ELOVL2</td>
+      <td><div class="transcript-list">ENST00000667435.1<br>ENST00000607275.6</div></td>
+      <td><span class="metric-excellent">0.95</span></td>
+      <td><span class="metric-excellent">0.92</span></td>
+      <td>8</td>
+      <td>714</td>
+    </tr>
+    <tr>
+      <td><span class="badge-cpg">CpG</span></td>
+      <td class="gene-name">FHL2</td>
+      <td><div class="transcript-list">ENST00000409177.6</div></td>
+      <td><span class="metric-excellent">0.93</span></td>
+      <td><span class="metric-excellent">0.9</span></td>
+      <td>9</td>
+      <td>714</td>
+    </tr>
+    <tr>
+      <td><span class="badge-cpg">CpG</span></td>
+      <td class="gene-name">FHL2</td>
+      <td><div class="transcript-list">ENST00000393353.7<br>ENST00000344213.9<br>ENST00000530340.6<br>ENST00000358129.8<br>ENST00000408995.5<br>ENST00000322142.13</div></td>
+      <td><span class="metric-excellent">0.93</span></td>
+      <td><span class="metric-excellent">0.9</span></td>
+      <td>18</td>
+      <td>714</td>
+    </tr>
+    <tr>
+      <td><span class="badge-cpg">CpG</span></td>
+      <td class="gene-name">TRIM59</td>
+      <td><div class="transcript-list">ENST00000471155.5<br>ENST00000483754.1<br>ENST00000471396.1<br>ENST00000479460.5<br>ENST00000309784.9</div></td>
+      <td><span class="metric-good">0.89</span></td>
+      <td><span class="metric-good">0.83</span></td>
+      <td>14</td>
+      <td>636</td>
+    </tr>
+    <tr>
+      <td><span class="badge-cpg">CpG</span></td>
+      <td class="gene-name">TRIM59</td>
+      <td><div class="transcript-list">ENST00000543469.1</div></td>
+      <td><span class="metric-good">0.89</span></td>
+      <td><span class="metric-good">0.81</span></td>
+      <td>13</td>
+      <td>714</td>
+    </tr>
+    <tr>
+      <td><span class="badge-cpg">CpG</span></td>
+      <td class="gene-name">TRIM59</td>
+      <td><div class="transcript-list">ENST00000494486.1</div></td>
+      <td><span class="metric-good">0.89</span></td>
+      <td><span class="metric-good">0.81</span></td>
+      <td>13</td>
+      <td>714</td>
+    </tr>
+    <tr>
+      <td><span class="badge-cpg">CpG</span></td>
+      <td class="gene-name">TRIM59</td>
+      <td><div class="transcript-list">ENST00000496222.1</div></td>
+      <td><span class="metric-good">0.89</span></td>
+      <td><span class="metric-good">0.81</span></td>
+      <td>14</td>
+      <td>636</td>
+    </tr>
+    <tr>
+      <td><span class="badge-cpg">CpG</span></td>
+      <td class="gene-name">CALB1</td>
+      <td><div class="transcript-list">ENST00000518457.5</div></td>
+      <td><span class="metric-good">0.88</span></td>
+      <td><span class="metric-good">0.79</span></td>
+      <td>8</td>
+      <td>671</td>
+    </tr>
+    <tr>
+      <td><span class="badge-cpg">CpG</span></td>
+      <td class="gene-name">CALB1</td>
+      <td><div class="transcript-list">ENST00000476853.1<br>ENST00000473670.1</div></td>
+      <td><span class="metric-good">0.88</span></td>
+      <td><span class="metric-good">0.79</span></td>
+      <td>8</td>
+      <td>710</td>
+    </tr>
+    <tr>
+      <td><span class="badge-cpg">CpG</span></td>
+      <td class="gene-name">CALB1</td>
+      <td><div class="transcript-list">ENST00000265431.7</div></td>
+      <td><span class="metric-good">0.88</span></td>
+      <td><span class="metric-good">0.78</span></td>
+      <td>5</td>
+      <td>671</td>
+    </tr>
+    <tr>
+      <td><span class="badge-cpg">CpG</span></td>
+      <td class="gene-name">CALB1</td>
+      <td><div class="transcript-list">ENST00000482702.5</div></td>
+      <td><span class="metric-good">0.88</span></td>
+      <td><span class="metric-good">0.79</span></td>
+      <td>7</td>
+      <td>710</td>
+    </tr>
+    <tr>
+      <td><span class="badge-cpg">CpG</span></td>
+      <td class="gene-name">VTRNA1-2</td>
+      <td><div class="transcript-list">ENST00000689319.1</div></td>
+      <td><span class="metric-good">0.87</span></td>
+      <td><span class="metric-good">0.78</span></td>
+      <td>6</td>
+      <td>703</td>
+    </tr>
+    <tr>
+      <td><span class="badge-cpg">CpG</span></td>
+      <td class="gene-name">MIR29B2CHG</td>
+      <td><div class="transcript-list">ENST00000655169.1</div></td>
+      <td><span class="metric-good">-0.86</span></td>
+      <td><span class="metric-good">0.83</span></td>
+      <td>7</td>
+      <td>687</td>
+    </tr>
+    <tr>
+      <td><span class="badge-cpg">CpG</span></td>
+      <td class="gene-name">MIR29B2CHG</td>
+      <td><div class="transcript-list">ENST00000487977.2<br>ENST00000652846.1<br>ENST00000702741.1</div></td>
+      <td><span class="metric-good">-0.86</span></td>
+      <td><span class="metric-good">0.82</span></td>
+      <td>5</td>
+      <td>687</td>
+    </tr>
+    <tr>
+      <td><span class="badge-ml">ML</span></td>
+      <td class="gene-name">OBSCN</td>
+      <td><div class="transcript-list">ENST00000422127.5<br>ENST00000680850.1<br>ENST00000570156.7</div></td>
+      <td><span class="metric-good">0.76</span></td>
+      <td><span class="metric-excellent">0.84</span></td>
+      <td>69</td>
+      <td>714</td>
+    </tr>
+    <tr>
+      <td><span class="badge-cpg">CpG</span></td>
+      <td class="gene-name">OTUD7A</td>
+      <td><div class="transcript-list">ENST00000560598.2</div></td>
+      <td><span class="metric-good">0.84</span></td>
+      <td><span class="metric-good">0.79</span></td>
+      <td>11</td>
+      <td>714</td>
+    </tr>
+    <tr>
+      <td><span class="badge-cpg">CpG</span></td>
+      <td class="gene-name">KLF14</td>
+      <td><div class="transcript-list">ENST00000583337.4</div></td>
+      <td><span class="metric-good">0.83</span></td>
+      <td><span class="metric-good">0.8</span></td>
+      <td>13</td>
+      <td>685</td>
+    </tr>
+    <tr>
+      <td><span class="badge-ml">ML</span></td>
+      <td class="gene-name">PRRT1</td>
+      <td><div class="transcript-list">ENST00000472641.1</div></td>
+      <td><span class="metric-good">0.75</span></td>
+      <td><span class="metric-excellent">0.83</span></td>
+      <td>46</td>
+      <td>678</td>
+    </tr>
+    <tr>
+      <td><span class="badge-ml">ML</span></td>
+      <td class="gene-name">PRRT1</td>
+      <td><div class="transcript-list">ENST00000211413.10</div></td>
+      <td><span class="metric-good">0.76</span></td>
+      <td><span class="metric-excellent">0.83</span></td>
+      <td>60</td>
+      <td>660</td>
+    </tr>
+    <tr>
+      <td><span class="badge-ml">ML</span></td>
+      <td class="gene-name">PRRT1</td>
+      <td><div class="transcript-list">ENST00000495191.5</div></td>
+      <td><span class="metric-good">0.76</span></td>
+      <td><span class="metric-excellent">0.83</span></td>
+      <td>62</td>
+      <td>660</td>
+    </tr>
+    <tr>
+      <td><span class="badge-ml">ML</span></td>
+      <td class="gene-name">OBSCN</td>
+      <td><div class="transcript-list">ENST00000636476.2</div></td>
+      <td><span class="metric-good">0.76</span></td>
+      <td><span class="metric-good">0.82</span></td>
+      <td>57</td>
+      <td>714</td>
+    </tr>
+    <tr>
+      <td><span class="badge-ml">ML</span></td>
+      <td class="gene-name">PRRT1</td>
+      <td><div class="transcript-list">ENST00000375150.6</div></td>
+      <td><span class="metric-good">0.76</span></td>
+      <td><span class="metric-good">0.82</span></td>
+      <td>76</td>
+      <td>663</td>
+    </tr>
+    <tr>
+      <td><span class="badge-cpg">CpG</span></td>
+      <td class="gene-name">SYNGR3</td>
+      <td><div class="transcript-list">ENST00000248121.7</div></td>
+      <td><span class="metric-good">0.81</span></td>
+      <td><span class="metric-good">0.77</span></td>
+      <td>12</td>
+      <td>714</td>
+    </tr>
+    <tr>
+      <td><span class="badge-ml">ML</span></td>
+      <td class="gene-name">OBSCN</td>
+      <td><div class="transcript-list">ENST00000662438.1</div></td>
+      <td><span class="metric-good">0.76</span></td>
+      <td><span class="metric-good">0.8</span></td>
+      <td>55</td>
+      <td>714</td>
+    </tr>
+    <tr>
+      <td><span class="badge-cpg">CpG</span></td>
+      <td class="gene-name">KCNS1</td>
+      <td><div class="transcript-list">ENST00000537075.3</div></td>
+      <td><span class="metric-good">0.8</span></td>
+      <td><span class="metric-good">0.78</span></td>
+      <td>12</td>
+      <td>713</td>
+    </tr>
+    <tr>
+      <td><span class="badge-cpg">CpG</span></td>
+      <td class="gene-name">SLC1A6</td>
+      <td><div class="transcript-list">ENST00000430939.6</div></td>
+      <td><span class="metric-good">0.78</span></td>
+      <td><span class="metric-fair">0.72</span></td>
+      <td>14</td>
+      <td>714</td>
+    </tr>
+    <tr>
+      <td><span class="badge-cpg">CpG</span></td>
+      <td class="gene-name">TEKTL1</td>
+      <td><div class="transcript-list">ENST00000292574.4</div></td>
+      <td><span class="metric-good">0.78</span></td>
+      <td><span class="metric-fair">0.72</span></td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><span class="badge-ml">ML</span></td>
+      <td class="gene-name">RNF180</td>
+      <td><div class="transcript-list">ENST00000504296.1</div></td>
+      <td><span class="metric-fair">0.63</span></td>
+      <td><span class="metric-good">0.77</span></td>
+      <td>8</td>
+      <td>714</td>
+    </tr>
+    <tr>
+      <td><span class="badge-ml">ML</span></td>
+      <td class="gene-name">PRRT1</td>
+      <td><div class="transcript-list">ENST00000467780.5</div></td>
+      <td><span class="metric-good">0.74</span></td>
+      <td><span class="metric-good">0.77</span></td>
+      <td>41</td>
+      <td>686</td>
+    </tr>
+    <tr>
+      <td><span class="badge-cpg">CpG</span></td>
+      <td class="gene-name">FOXG1-AS1</td>
+      <td><div class="transcript-list">ENST00000546560.5</div></td>
+      <td><span class="metric-good">0.77</span></td>
+      <td><span class="metric-fair">0.71</span></td>
+      <td>12</td>
+      <td>683</td>
+    </tr>
+    <tr>
+      <td><span class="badge-cpg">CpG</span></td>
+      <td class="gene-name">TP73</td>
+      <td><div class="transcript-list">ENST00000354437.8</div></td>
+      <td><span class="metric-good">0.74</span></td>
+      <td><span class="metric-fair">0.71</span></td>
+      <td>27</td>
+      <td>714</td>
+    </tr>
+    <tr>
+      <td><span class="badge-ml">ML</span></td>
+      <td class="gene-name">SPTBN4</td>
+      <td><div class="transcript-list">ENST00000352632.7</div></td>
+      <td><span class="metric-fair">0.69</span></td>
+      <td><span class="metric-good">0.73</span></td>
+      <td>42</td>
+      <td>682</td>
+    </tr>
+    <tr>
+      <td><span class="badge-ml">ML</span></td>
+      <td class="gene-name">CACNA1G</td>
+      <td><div class="transcript-list">ENST00000359106.10</div></td>
+      <td><span class="metric-good">0.7</span></td>
+      <td><span class="metric-good">0.75</span></td>
+      <td>41</td>
+      <td>714</td>
+    </tr>
+    <tr>
+      <td><span class="badge-both">CpG & ML</span></td>
+      <td class="gene-name">PPM1N</td>
+      <td><div class="transcript-list">ENST00000415077.1</div></td>
+      <td><span class="metric-fair">0.66</span></td>
+      <td><span class="metric-fair">0.66</span></td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>—</td>
+      <td class="gene-name">ZIK1</td>
+      <td><div class="transcript-list">ENST00000597219.1</div></td>
+      <td><span class="metric-good">0.82</span></td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>—</td>
+      <td class="gene-name">CELF6</td>
+      <td><div class="transcript-list">ENST00000567083.2</div></td>
+      <td><span class="metric-good">0.81</span></td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>—</td>
+      <td class="gene-name">CACNA1G</td>
+      <td><div class="transcript-list">ENST00000442258.6</div></td>
+      <td><span class="metric-good">0.7</span></td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+  </tbody>
 </table>
-
-<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-<tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
-<tr><td colspan="2"><b>ELOVL2</b><br><sub>ENST00000354666.4</sub></td></tr>
-<tr><td><b>Best CpG / Spearman</b></td><td>cg16867657 0.95<br>cg24724428 0.87<br>cg21572722 0.92</td></tr>
-<tr><td><b>CpGs</b></td><td>7</td></tr>
-<tr><td><b>Samples</b></td><td>714</td></tr>
-<tr><td><b>Best model</b></td><td><code>bagEarth(1186:1231)</code></td></tr>
-<tr><td><b>Median R²</b></td><td>0.92 (IQR 0.01)</td></tr>
-<tr><td><b>R² range</b></td><td>0.88–0.95</td></tr>
-<tr><td><b>Median MAE</b></td><td>4.46 (IQR 0.35)</td></tr>
-<tr><td><b>Max R² scramble age</b></td><td>0.05</td></tr>
-</table>
-
-<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-<tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
-<tr><td colspan="2"><b>ELOVL2</b><br><sub>ENST00000667435.1<br>ENST00000607275.6</sub></td></tr>
-<tr><td><b>Best CpG / Spearman</b></td><td>cg16867657 0.95<br>cg24724428 0.87<br>cg21572722 0.92</td></tr>
-<tr><td><b>CpGs</b></td><td>8</td></tr>
-<tr><td><b>Samples</b></td><td>714</td></tr>
-<tr><td><b>Best model</b></td><td><code>cubist(243:3)</code></td></tr>
-<tr><td><b>Median R²</b></td><td>0.92 (IQR 0.01)</td></tr>
-<tr><td><b>R² range</b></td><td>0.87–0.95</td></tr>
-<tr><td><b>Median MAE</b></td><td>4.46 (IQR 0.37)</td></tr>
-<tr><td><b>Max R² scramble age</b></td><td>0.04</td></tr>
-</table>
-
-<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-<tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
-<tr><td colspan="2"><b>FHL2</b><br><sub>ENST00000409177.6</sub></td></tr>
-<tr><td><b>Best CpG / Spearman</b></td><td>cg06639320 0.93<br>cg24079702 0.90<br>cg22454769 0.92</td></tr>
-<tr><td><b>CpGs</b></td><td>9</td></tr>
-<tr><td><b>Samples</b></td><td>714</td></tr>
-<tr><td><b>Best model</b></td><td><code>gamLoess(3157:8479)</code></td></tr>
-<tr><td><b>Median R²</b></td><td>0.9 (IQR 0.02)</td></tr>
-<tr><td><b>R² range</b></td><td>0.85–0.94</td></tr>
-<tr><td><b>Median MAE</b></td><td>5.06 (IQR 0.44)</td></tr>
-<tr><td><b>Max R² scramble age</b></td><td>0.04</td></tr>
-</table>
-
-<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-<tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
-<tr><td colspan="2"><b>FHL2</b><br><sub>ENST00000393353.7<br>ENST00000344213.9<br>ENST00000530340.6<br>ENST00000358129.8<br>ENST00000408995.5<br>ENST00000322142.13</sub></td></tr>
-<tr><td><b>Best CpG / Spearman</b></td><td>cg24079702 0.90<br>cg22454769 0.92<br>cg06639320 0.93</td></tr>
-<tr><td><b>CpGs</b></td><td>18</td></tr>
-<tr><td><b>Samples</b></td><td>714</td></tr>
-<tr><td><b>Best model</b></td><td><code>bagEarth(2123:1849)</code></td></tr>
-<tr><td><b>Median R²</b></td><td>0.9 (IQR 0.03)</td></tr>
-<tr><td><b>R² range</b></td><td>0.45–0.94</td></tr>
-<tr><td><b>Median MAE</b></td><td>5.2 (IQR 0.51)</td></tr>
-<tr><td><b>Max R² scramble age</b></td><td>0.04</td></tr>
-</table>
-
-<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-<tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
-<tr><td colspan="2"><b>TRIM59</b><br><sub>ENST00000471155.5<br>ENST00000483754.1<br>ENST00000471396.1<br>ENST00000479460.5<br>ENST00000309784.9</sub></td></tr>
-<tr><td><b>Best CpG / Spearman</b></td><td>cg07553761 0.89</td></tr>
-<tr><td><b>CpGs</b></td><td>14</td></tr>
-<tr><td><b>Samples</b></td><td>636</td></tr>
-<tr><td><b>Best model</b></td><td><code>bstTree(1351:1)</code></td></tr>
-<tr><td><b>Median R²</b></td><td>0.83 (IQR 0.03)</td></tr>
-<tr><td><b>R² range</b></td><td>0.72–0.89</td></tr>
-<tr><td><b>Median MAE</b></td><td>6.91 (IQR 0.58)</td></tr>
-<tr><td><b>Max R² scramble age</b></td><td>0.06</td></tr>
-</table>
-
-<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-<tr><td colspan="2"><img alt="ML centered" src="https://img.shields.io/badge/ML_centered-orange?style=flat-square"></td></tr>
-<tr><td colspan="2"><b>OBSCN</b><br><sub>ENST00000422127.5<br>ENST00000680850.1<br>ENST00000570156.7</sub></td></tr>
-<tr><td><b>Best CpG / Spearman</b></td><td>cg04193160 0.76<br>cg00251125 -0.73<br>cg19261426 -0.72</td></tr>
-<tr><td><b>CpGs</b></td><td>69</td></tr>
-<tr><td><b>Samples</b></td><td>714</td></tr>
-<tr><td><b>Best model</b></td><td><code>gamboost(3928:1)</code></td></tr>
-<tr><td><b>Median R²</b></td><td> 0.84 (IQR 0.03)</td></tr>
-<tr><td><b>R² range</b></td><td>0.73–0.9</td></tr>
-<tr><td><b>Median MAE</b></td><td>6.36 (IQR 0.54)</td></tr>
-<tr><td><b>Max R² scramble age</b></td><td>0.06</td></tr>
-</table>
-
-<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-<tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
-<tr><td colspan="2"><b>MIR29B2CHG</b><br><sub>ENST00000655169.1</sub></td></tr>
-<tr><td><b>Best CpG / Spearman</b></td><td>cg10501210 -0.86<br>(negative)</td></tr>
-<tr><td><b>CpGs</b></td><td>7</td></tr>
-<tr><td><b>Samples</b></td><td>687</td></tr>
-<tr><td><b>Best model</b></td><td><code>ranger(3687:1)</code></td></tr>
-<tr><td><b>Median R²</b></td><td>0.83 (IQR 0.03)</td></tr>
-<tr><td><b>R² range</b></td><td>0.74–0.9</td></tr>
-<tr><td><b>Median MAE</b></td><td>6.64 (IQR 0.58)</td></tr>
-<tr><td><b>Max R² scramble age</b></td><td>0.04</td></tr>
-</table>
-
-<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-<tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
-<tr><td colspan="2"><b>TRIM59</b><br><sub>ENST00000543469.1</sub></td></tr>
-<tr><td><b>Best CpG / Spearman</b></td><td>cg07553761 0.89</td></tr>
-<tr><td><b>CpGs</b></td><td>13</td></tr>
-<tr><td><b>Samples</b></td><td>714</td></tr>
-<tr><td><b>Best model</b></td><td><code>rf(2233:1)</code></td></tr>
-<tr><td><b>Median R²</b></td><td>0.81 (IQR 0.03)</td></tr>
-<tr><td><b>R² range</b></td><td>0.73–0.88</td></tr>
-<tr><td><b>Median MAE</b></td><td>7.15 (IQR 0.57)</td></tr>
-<tr><td><b>Max R² scramble age</b></td><td>0.04</td></tr>
-</table>
-
-<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-<tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
-<tr><td colspan="2"><b>TRIM59</b><br><sub>ENST00000494486.1</sub></td></tr>
-<tr><td><b>Best CpG / Spearman</b></td><td>cg07553761 0.89</td></tr>
-<tr><td><b>CpGs</b></td><td>13</td></tr>
-<tr><td><b>Samples</b></td><td>714</td></tr>
-<tr><td><b>Best model</b></td><td><code>bagEarth(3082:1)</code></td></tr>
-<tr><td><b>Median R²</b></td><td> 0.81 (IQR 0.04)</td></tr>
-<tr><td><b>R² range</b></td><td>0.39–0.89</td></tr>
-<tr><td><b>Median MAE</b></td><td>7.15 (IQR 0.71)</td></tr>
-<tr><td><b>Max R² scramble age</b></td><td>0.05</td></tr>
-</table>
-
-<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-<tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
-<tr><td colspan="2"><b>TRIM59</b><br><sub>ENST00000496222.1</sub></td></tr>
-<tr><td><b>Best CpG / Spearman</b></td><td>cg07553761 0.89</td></tr>
-<tr><td><b>CpGs</b></td><td>14</td></tr>
-<tr><td><b>Samples</b></td><td>636</td></tr>
-<tr><td><b>Best model</b></td><td><code>bagEarth(3598:1)</code></td></tr>
-<tr><td><b>Median R²</b></td><td>0.81 (IQR 0.05)</td></tr>
-<tr><td><b>R² range</b></td><td>0.32–0.89</td></tr>
-<tr><td><b>Median MAE</b></td><td>7.19 (IQR 0.85)</td></tr>
-<tr><td><b>Max R² scramble age</b></td><td>0.03</td></tr>
-</table>
-
-<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-<tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
-<tr><td colspan="2"><b>MIR29B2CHG</b><br><sub>ENST00000487977.2<br>ENST00000652846.1<br>ENST00000702741.1</sub></td></tr>
-<tr><td><b>Best CpG / Spearman</b></td><td>cg10501210 -0.86<br>(negative)</td></tr>
-<tr><td><b>CpGs</b></td><td>5</td></tr>
-<tr><td><b>Samples</b></td><td>687</td></tr>
-<tr><td><b>Best model</b></td><td><code>ranger(3687:1)</code></td></tr>
-<tr><td><b>Median R²</b></td><td>0.82 (IQR 0.03)</td></tr>
-<tr><td><b>R² range</b></td><td>0.73–0.89</td></tr>
-<tr><td><b>Median MAE</b></td><td>6.73 (IQR 0.58)</td></tr>
-<tr><td><b>Max R² scramble age</b></td><td>0.03</td></tr>
-</table>
-
-<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-<tr><td colspan="2"><img alt="ML centered" src="https://img.shields.io/badge/ML_centered-orange?style=flat-square"></td></tr>
-<tr><td colspan="2"><b>OBSCN</b><br><sub>ENST00000636476.2</sub></td></tr>
-<tr><td><b>Best CpG / Spearman</b></td><td>cg04193160 0.76<br>cg19261426 -0.72</td></tr>
-<tr><td><b>CpGs</b></td><td>57</td></tr>
-<tr><td><b>Samples</b></td><td>714</td></tr>
-<tr><td><b>Best model</b></td><td><code>gamboost(3928:1)</code></td></tr>
-<tr><td><b>Median R²</b></td><td>0.82 (IQR 0.04)</td></tr>
-<tr><td><b>R² range</b></td><td>0.68–0.89</td></tr>
-<tr><td><b>Median MAE</b></td><td>0.82 (IQR 0.04)</td></tr>
-<tr><td><b>Max R² scramble age</b></td><td>0.04</td></tr>
-</table>
-
-<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-<tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
-<tr><td colspan="2"><b>KLF14</b><br><sub>ENST00000583337.4</sub></td></tr>
-<tr><td><b>Best CpG / Spearman</b></td><td>cg08097417 0.83<br>cg07955995 0.83</td></tr>
-<tr><td><b>CpGs</b></td><td>13</td></tr>
-<tr><td><b>Samples</b></td><td>685</td></tr>
-<tr><td><b>Best model</b></td><td><code>ppr(2155:1)</code></td></tr>
-<tr><td><b>Median R²</b></td><td>0.8 (IQR 0.04)</td></tr>
-<tr><td><b>R² range</b></td><td>0.69–0.89</td></tr>
-<tr><td><b>Median MAE</b></td><td>6.99 (IQR 0.66)</td></tr>
-<tr><td><b>Max R² scramble age</b></td><td>0.05</td></tr>
-</table>
-
-<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-<tr><td colspan="2"><img alt="ML centered" src="https://img.shields.io/badge/ML_centered-orange?style=flat-square"></td></tr>
-<tr><td colspan="2"><b>PRRT1</b><br><sub>ENST00000472641.1</sub></td></tr>
-<tr><td><b>Best CpG / Spearman</b></td><td>cg24125828 0.75<br>cg13782301 0.74<br>cg18501647 0.73<br>cg14757228 0.73<br>cg27067781 0.73<br>cg11945824 0.72<br>cg22897615 0.70</td></tr>
-<tr><td><b>CpGs</b></td><td>46</td></tr>
-<tr><td><b>Samples</b></td><td>678</td></tr>
-<tr><td><b>Best model</b></td><td><code>brnn(2245:1)</code></td></tr>
-<tr><td><b>Median R²</b></td><td>0.83 (IQR 0.03)</td></tr>
-<tr><td><b>R² range</b></td><td>0.73–0.89</td></tr>
-<tr><td><b>Median MAE</b></td><td>6.71 (IQR 0.59)</td></tr>
-<tr><td><b>Max R² scramble age</b></td><td>0.04</td></tr>
-</table>
-
-<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-<tr><td colspan="2"><img alt="ML centered" src="https://img.shields.io/badge/ML_centered-orange?style=flat-square"></td></tr>
-<tr><td colspan="2"><b>PRRT1</b><br><sub>ENST00000375150.6</sub></td></tr>
-<tr><td><b>Best CpG / Spearman</b></td><td>cg24125828 0.76<br>cg13782301 0.74<br>cg14757228 0.73<br>cg18501647 0.73<br>cg27067781 0.73<br>cg11945824 0.72<br>cg22897615 0.70</td></tr>
-<tr><td><b>CpGs</b></td><td>76</td></tr>
-<tr><td><b>Samples</b></td><td>663</td></tr>
-<tr><td><b>Best model</b></td><td><code>brnn(2973:1)</code></td></tr>
-<tr><td><b>Median R²</b></td><td>0.82 (IQR 0.03)</td></tr>
-<tr><td><b>R² range</b></td><td>0.72–0.88</td></tr>
-<tr><td><b>Median MAE</b></td><td>6.96 (IQR 0.61)</td></tr>
-<tr><td><b>Max R² scramble age</b></td><td>0.05</td></tr>
-</table>
-
-<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-<tr><td colspan="2"><img alt="ML centered" src="https://img.shields.io/badge/ML_centered-orange?style=flat-square"></td></tr>
-<tr><td colspan="2"><b>OBSCN</b><br><sub>ENST00000662438.1</sub></td></tr>
-<tr><td><b>Best CpG / Spearman</b></td><td>cg04193160 0.76<br>cg19261426 -0.72</td></tr>
-<tr><td><b>CpGs</b></td><td>55</td></tr>
-<tr><td><b>Samples</b></td><td>714</td></tr>
-<tr><td><b>Best model</b></td><td><code>ppr(3526:1)</code></td></tr>
-<tr><td><b>Median R²</b></td><td>0.8 (IQR 0.04)</td></tr>
-<tr><td><b>R² range</b></td><td>0.64–0.88</td></tr>
-<tr><td><b>Median MAE</b></td><td>0.8 (IQR 0.04)</td></tr>
-<tr><td><b>Max R² scramble age</b></td><td>0.07</td></tr>
-</table>
-
-<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-<tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
-<tr><td colspan="2"><b>CALB1</b><br><sub>ENST00000518457.5</sub></td></tr>
-<tr><td><b>Best CpG / Spearman</b></td><td>cg26290632 0.88</td></tr>
-<tr><td><b>CpGs</b></td><td>8</td></tr>
-<tr><td><b>Samples</b></td><td>671</td></tr>
-<tr><td><b>Best model</b></td><td><code>ppr(1412:1)</code></td></tr>
-<tr><td><b>Median R²</b></td><td>0.79 (IQR 0.04)</td></tr>
-<tr><td><b>R² range</b></td><td>0.65–0.87</td></tr>
-<tr><td><b>Median MAE</b></td><td>7.35 (IQR 0.64)</td></tr>
-<tr><td><b>Max R² scramble age</b></td><td>0.05</td></tr>
-</table>
-
-<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-<tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
-<tr><td colspan="2"><b>CALB1</b><br><sub>ENST00000476853.1<br>ENST00000473670.1</sub></td></tr>
-<tr><td><b>Best CpG / Spearman</b></td><td>cg26290632 0.88</td></tr>
-<tr><td><b>CpGs</b></td><td>8</td></tr>
-<tr><td><b>Samples</b></td><td>710</td></tr>
-<tr><td><b>Best model</b></td><td><code>ppr(2556:1)</code></td></tr>
-<tr><td><b>Median R²</b></td><td>0.79 (IQR 0.04)</td></tr>
-<tr><td><b>R² range</b></td><td>0.68–0.87</td></tr>
-<tr><td><b>Median MAE</b></td><td>7.35 (IQR 0.64)</td></tr>
-<tr><td><b>Max R² scramble age</b></td><td>0.04</td></tr>
-</table>
-
-<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-<tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
-<tr><td colspan="2"><b>CALB1</b><br><sub>ENST00000265431.7</sub></td></tr>
-<tr><td><b>Best CpG / Spearman</b></td><td>cg26290632 0.88</td></tr>
-<tr><td><b>CpGs</b></td><td>5</td></tr>
-<tr><td><b>Samples</b></td><td>671</td></tr>
-<tr><td><b>Best model</b></td><td><code>ppr(2053:1)</code></td></tr>
-<tr><td><b>Median R²</b></td><td>0.78 (IQR 0.04)</td></tr>
-<tr><td><b>R² range</b></td><td>0.65–0.87</td></tr>
-<tr><td><b>Median MAE</b></td><td>7.44 (IQR 0.68)</td></tr>
-<tr><td><b>Max R² scramble age</b></td><td>0.02</td></tr>
-</table>
-
-<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-<tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
-<tr><td colspan="2"><b>CALB1</b><br><sub>ENST00000482702.5</sub></td></tr>
-<tr><td><b>Best CpG / Spearman</b></td><td>cg26290632 0.88</td></tr>
-<tr><td><b>CpGs</b></td><td>7</td></tr>
-<tr><td><b>Samples</b></td><td>710</td></tr>
-<tr><td><b>Best model</b></td><td><code>ppr(2556:1)</code></td></tr>
-<tr><td><b>Median R²</b></td><td>0.79 (IQR 0.04)</td></tr>
-<tr><td><b>R² range</b></td><td>0.67–0.86</td></tr>
-<tr><td><b>Median MAE</b></td><td>7.41 (IQR 0.64)</td></tr>
-<tr><td><b>Max R² scramble age</b></td><td>0.03</td></tr>
-</table>
-
-<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-<tr><td colspan="2"><img alt="ML centered" src="https://img.shields.io/badge/ML_centered-orange?style=flat-square"></td></tr>
-<tr><td colspan="2"><b>PRRT1</b><br><sub>ENST00000211413.10</sub></td></tr>
-<tr><td><b>Best CpG / Spearman</b></td><td>cg24125828 0.76<br>cg13782301 0.74<br>cg14757228 0.73<br>cg18501647 0.73<br>cg27067781 0.73<br>cg11945824 0.72<br>cg22897615 0.70</td></tr>
-<tr><td><b>CpGs</b></td><td>60</td></tr>
-<tr><td><b>Samples</b></td><td>660</td></tr>
-<tr><td><b>Best model</b></td><td><code>bagEarthGCV(3125:1)</code></td></tr>
-<tr><td><b>Median R²</b></td><td>0.83 (IQR 0.03)</td></tr>
-<tr><td><b>R² range</b></td><td>0.74–0.9</td></tr>
-<tr><td><b>Median MAE</b></td><td>6.63 (IQR 0.58)</td></tr>
-<tr><td><b>Max R² scramble age</b></td><td>0.05</td></tr>
-</table>
-
-<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-<tr><td colspan="2"><img alt="ML centered" src="https://img.shields.io/badge/ML_centered-orange?style=flat-square"></td></tr>
-<tr><td colspan="2"><b>PRRT1</b><br><sub>ENST00000495191.5</sub></td></tr>
-<tr><td><b>Best CpG / Spearman</b></td><td>cg24125828 0.76<br>cg13782301 0.74<br>cg14757228 0.73<br>cg18501647 0.73<br>cg27067781 0.73<br>cg11945824 0.72<br>cg22897615 0.70</td></tr>
-<tr><td><b>CpGs</b></td><td>62</td></tr>
-<tr><td><b>Samples</b></td><td>660</td></tr>
-<tr><td><b>Best model</b></td><td><code>bagEarthGCV(3125:1)</code></td></tr>
-<tr><td><b>Median R²</b></td><td>0.83 (IQR 0.03)</td></tr>
-<tr><td><b>R² range</b></td><td>0.74–0.9</td></tr>
-<tr><td><b>Median MAE</b></td><td>6.6 (IQR 0.58)</td></tr>
-<tr><td><b>Max R² scramble age</b></td><td>0.04</td></tr>
-</table>
-
-<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-<tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
-<tr><td colspan="2"><b>KCNS1</b><br><sub>ENST00000537075.3</sub></td></tr>
-<tr><td><b>Best CpG / Spearman</b></td><td>cg19702785 0.80</td></tr>
-<tr><td><b>CpGs</b></td><td>12</td></tr>
-<tr><td><b>Samples</b></td><td>713</td></tr>
-<tr><td><b>Best model</b></td><td><code>ppr(947:1)</code></td></tr>
-<tr><td><b>Median R²</b></td><td>0.78 (IQR 0.04)</td></tr>
-<tr><td><b>R² range</b></td><td>0.65–0.88</td></tr>
-<tr><td><b>Median MAE</b></td><td>7.44 (IQR 0.65)</td></tr>
-<tr><td><b>Max R² scramble age</b></td><td>0.06</td></tr>
-</table>
-
-<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-<tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
-<tr><td colspan="2"><b>VTRNA1-2</b><br><sub>ENST00000689319.1</sub></td></tr>
-<tr><td><b>Best CpG / Spearman</b></td><td>cg23500537 0.87</td></tr>
-<tr><td><b>CpGs</b></td><td>6</td></tr>
-<tr><td><b>Samples</b></td><td>703</td></tr>
-<tr><td><b>Best model</b></td><td><code>brnn(2065:1)</code></td></tr>
-<tr><td><b>Median R²</b></td><td>0.78 (IQR 0.03)</td></tr>
-<tr><td><b>R² range</b></td><td>0.68–0.86</td></tr>
-<tr><td><b>Median MAE</b></td><td>7.83 (IQR 0.61)</td></tr>
-<tr><td><b>Max R² scramble age</b></td><td>0.03</td></tr>
-</table>
-
-<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-<tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
-<tr><td colspan="2"><b>OTUD7A</b><br><sub>ENST00000560598.2</sub></td></tr>
-<tr><td><b>Best CpG / Spearman</b></td><td>cg04875128 0.84<br>cg01763090 0.81</td></tr>
-<tr><td><b>CpGs</b></td><td>11</td></tr>
-<tr><td><b>Samples</b></td><td>714</td></tr>
-<tr><td><b>Best model</b></td><td><code>bstTree(130:1)</code></td></tr>
-<tr><td><b>Median R²</b></td><td>0.79 (IQR 0.04)</td></tr>
-<tr><td><b>R² range</b></td><td>0.65–0.87</td></tr>
-<tr><td><b>Median MAE</b></td><td>7.43 (IQR 0.63)</td></tr>
-<tr><td><b>Max R² scramble age</b></td><td>0.05</td></tr>
-</table>
-
-<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-<tr><td colspan="2"><img alt="ML centered" src="https://img.shields.io/badge/ML_centered-orange?style=flat-square"></td></tr>
-<tr><td colspan="2"><b>PRRT1</b><br><sub>ENST00000467780.5</sub></td></tr>
-<tr><td><b>Best CpG / Spearman</b></td><td>cg24125828 0.74<br>cg13782301 0.74<br>cg18501647 0.73<br>cg14757228 0.73<br>cg27067781 0.72<br>cg11945824 0.71</td></tr>
-<tr><td><b>CpGs</b></td><td>41</td></tr>
-<tr><td><b>Samples</b></td><td>686</td></tr>
-<tr><td><b>Best model</b></td><td><code>brnn(3178:1)</code></td></tr>
-<tr><td><b>Median R²</b></td><td> 0.77 (IQR 0.04)</td></tr>
-<tr><td><b>R² range</b></td><td>0.65–0.86</td></tr>
-<tr><td><b>Median MAE</b></td><td>7.82 (IQR 0.64)</td></tr>
-<tr><td><b>Max R² scramble age</b></td><td>0.06</td></tr>
-</table>
-
-<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-<tr><td colspan="2"><img alt="CpG centered" src="https://img.shields.io/badge/CpG_centered-blue?style=flat-square"></td></tr>
-<tr><td colspan="2"><b>SYNGR3</b><br><sub>ENST00000248121.7</sub></td></tr>
-<tr><td><b>Best CpG / Spearman</b></td><td>cg11220950 0.81</td></tr>
-<tr><td><b>CpGs</b></td><td>12</td></tr>
-<tr><td><b>Samples</b></td><td>714</td></tr>
-<tr><td><b>Best model</b></td><td><code>cubist(268:45)</code></td></tr>
-<tr><td><b>Median R²</b></td><td>0.77 (IQR 0.05)</td></tr>
-<tr><td><b>R² range</b></td><td>0.63–0.85</td></tr>
-<tr><td><b>Median MAE</b></td><td>7.8 (IQR 0.71)</td></tr>
-<tr><td><b>Max R² scramble age</b></td><td>0.03</td></tr>
-</table>
-
-<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-<tr><td colspan="2"><img alt="ML centered" src="https://img.shields.io/badge/ML_centered-orange?style=flat-square"></td></tr>
-<tr><td colspan="2"><b>SPTBN4</b><br><sub>ENST00000352632.7</sub></td></tr>
-<tr><td><b>Best CpG / Spearman</b></td><td>cg05764628 0.69<br>cg02997982 0.68<br>cg17768491 0.68<br>cg09381003 0.68<br>cg02576468 0.68</td></tr>
-<tr><td><b>CpGs</b></td><td>42</td></tr>
-<tr><td><b>Samples</b></td><td>682</td></tr>
-<tr><td><b>Best model</b></td><td><code>bagEarthGCV(3523:1)</code></td></tr>
-<tr><td><b>Median R²</b></td><td> 0.73 (IQR 0.04)</td></tr>
-<tr><td><b>R² range</b></td><td>0.6–0.83</td></tr>
-<tr><td><b>Median MAE</b></td><td>8.66 (IQR 0.67)</td></tr>
-<tr><td><b>Max R² scramble age</b></td><td>0.03</td></tr>
-</table>
-
-</div>
 
 ## Citation
 
