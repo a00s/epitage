@@ -1,0 +1,880 @@
+Gene,Transcripts,Spearman,Best model,wb,Scramble age (n=100),cpgs,samples,External GSE40279
+ELOVL2,"ENST00000456616.2
+ENST00000667154.1
+ENST00000657744.1","cg16867657 0.95
+cg21572722 0.92
+cg24724428 0.87","bagEarthGCV(243:1)
+Min R²: 0.88
+Max R²: 0.95
+Range R²: 0.06
+Medians:
+R²: 0.93 (IQR 0.01)
+MAE: 4.41 (IQR 0.36)","bagEarthGCV(239:1)
+Min R²: 0.88
+Max R²: 0.96
+Range R²: 0.08
+Medians:
+R²: 0.93 (IQR 0.01)
+MAE: 4.23 (IQR 0.34)
+RMSE: 5.50 (IQR 0.45)","Mean R2: 0.0105
+Median R2: 0.0056
+IQR: 0.0148
+Minimum R2: 0
+Maximum R2: 0.065
+Range: 0.065",7,714,"n=469
+R^2=0.74
+Pearson=0.86
+MAE=12.94
+RMSE=14.61"
+ELOVL2,ENST00000354666.4,"cg16867657 0.95
+cg24724428 0.87
+cg21572722 0.92","bagEarth(1186:1231)
+Min R²: 0.88
+Max R²: 0.95
+Range R²: 0.06
+Medians:
+R²: 0.92 (IQR 0.01)
+MAE: 4.46 (IQR 0.35)","bagEarth(239:1)
+Min R²: 0.88
+Max R²: 0.96
+Range R²: 0.08
+Medians:
+R²: 0.93 (IQR 0.01)
+MAE: 4.29 (IQR 0.35)
+RMSE: 5.56 (IQR 0.46)","Mean R2: 0.0072
+Median R2: 0.0041
+IQR: 0.01
+Minimum R2: 0
+Maximum R2: 0.0508
+Range: 0.0508",7,714,"n=474
+R^2=0.75
+Pearson=0.87
+MAE=14.44
+RMSE=15.93"
+ELOVL2,"ENST00000667435.1
+ENST00000607275.6","cg16867657 0.95
+cg24724428 0.87
+cg21572722 0.92","cubist(243:3)
+Min R²: 0.87
+Max R²: 0.95
+Range R²: 0.08
+Medians:
+R²: 0.92 (IQR 0.01)
+MAE: 4.46 (IQR 0.37)","cubist(243:1)
+Min R²: 0.90
+Max R²: 0.96
+Range R²: 0.06
+Medians:
+R²: 0.93 (IQR 0.01)
+MAE: 4.18 (IQR 0.34)
+RMSE: 5.42 (IQR 0.43)","Mean R2: 0.0069
+Median R2: 0.0027
+IQR: 0.0082
+Minimum R2: 0
+Maximum R2: 0.0499
+Range: 0.0499",8,714,"n=469
+R^2=0.71
+Pearson=0.84
+MAE=16.41
+RMSE=17.99"
+FHL2,ENST00000409177.6,"cg06639320 0.93
+cg24079702 0.90
+cg22454769 0.92","gamLoess(3157:8479)
+Min R²: 0.85
+Max R²: 0.94
+Range R²: 0.09
+Medians:
+R²: 0.9 (IQR 0.02)
+MAE: 5.06 (IQR 0.44)","gamLoess(3157:1)
+Min R²: 0.65
+Max R²: 0.95
+Range R²: 0.30
+Medians:
+R²: 0.90 (IQR 0.02)
+MAE: 5.03 (IQR 0.47)
+RMSE: 6.57 (IQR 0.78)","Min R²: 0.00
+Max R²: 0.04
+Range R²: 0.04
+Medians:
+R²: 0.00 (IQR 0.01)
+MAE: 18.42 (IQR 0.64)
+RMSE: 21.73 (IQR 0.78)",9,714,"n=656
+R^2=0.60
+Pearson=0.78
+MAE=8.70
+RMSE=11.39"
+FHL2,"ENST00000393353.7
+ENST00000344213.9
+ENST00000530340.6
+ENST00000358129.8
+ENST00000408995.5
+ENST00000322142.13","cg24079702 0.90
+cg22454769 0.92
+cg06639320 0.93","bagEarth(2123:1849)
+Min R²: 0.45
+Max R²: 0.94
+Range R²: 0.48
+Medians:
+R²: 0.9 (IQR 0.03)
+MAE: 5.2 (IQR 0.51)","bagEarth(299:1)
+Min R²: 0.54
+Max R²: 0.94
+Range R²: 0.40
+Medians:
+R²: 0.90 (IQR 0.02)
+MAE: 5.07 (IQR 0.47)
+RMSE: 6.62 (IQR 0.72)","Mean R2: 0.0043
+Median R2: 0.0018
+IQR: 0.0042
+Minimum R2: 0
+Maximum R2: 0.0424
+Range: 0.0424",18,714,"n=410
+R^2=0.64
+Pearson=0.80
+MAE=8.47
+RMSE=10.87"
+TRIM59,"ENST00000471155.5
+ENST00000483754.1
+ENST00000471396.1
+ENST00000479460.5
+ENST00000309784.9",cg07553761 0.89,"bstTree(1351:1)
+Min R²: 0.72
+Max R²: 0.89
+Range R²: 0.16
+Medians:
+R²: 0.83 (IQR 0.03)
+MAE: 6.91 (IQR 0.58)","bstTree(1351:1)
+Min R²: 0.74
+Max R²: 0.9
+Range R²: 0.15
+Medians:
+R²: 0.84 (IQR 0.03)
+MAE: 6.74 (IQR 0.57)","Mean R2: 0.0056
+Median R2: 0.0021
+IQR: 0.0066
+Minimum R2: 0
+Maximum R2: 0.0628
+Range: 0.0628",14,636,"n=289
+R^2=0.50
+Pearson=0.70
+MAE=9.60
+RMSE=12.61"
+OBSCN,"ENST00000422127.5
+ENST00000680850.1
+ENST00000570156.7","cg04193160 0.76
+cg00251125 -0.73
+cg19261426 -0.72","gamboost(3928:1)
+Min R²: 0.73
+Max R²: 0.9
+Range R²: 0.16
+Medians:
+R²: 0.84 (IQR 0.03)
+MAE: 6.36 (IQR 0.54)","gamboost(3763:1)
+Min R²: 0.78
+Max R²: 0.91
+Range R²: 0.14
+Medians:
+R²: 0.87 (IQR 0.03)
+MAE: 5.99 (IQR 0.51)
+RMSE: 7.76 (IQR 0.72)","Mean R2: 0.0148
+Median R2: 0.0107
+IQR: 0.0223
+Minimum R2: 0
+Maximum R2: 0.0663
+Range: 0.0663",69,714,"n=250
+R^2=0.439
+Pearson=0.663
+MAE=9.96
+RMSE=12.61"
+MIR29B2CHG,ENST00000655169.1,"cg10501210 -0.86
+(negative)","ranger(3687:1)
+Min R²: 0.74
+Max R²: 0.9
+Range R²: 0.16
+Medians:
+R²: 0.83 (IQR 0.03)
+MAE: 6.64 (IQR 0.58)
+RMSE: 8.65 (IQR 0.78)","ranger(3830:1)
+Min R²: 0.78
+Max R²: 0.91
+Range R²: 0.12
+Medians:
+R²: 0.86 (IQR 0.03)
+MAE: 6.22 (IQR 0.53)
+RMSE: 8 (IQR 0.68)","Mean R2: 0.0052
+Median R2: 0.0023
+IQR: 0.0067
+Minimum R2: 0
+Maximum R2: 0.0478
+Range: 0.0478",7,687,"n=656
+R^2=0.35
+Pearson=0.59
+MAE=11.73
+RMSE=14.07"
+TRIM59,ENST00000543469.1,cg07553761 0.89,"rf(2233:1)
+Min R²: 0.73
+Max R²: 0.88
+Range R²: 0.14
+Medians:
+R²: 0.81 (IQR 0.03)
+MAE: 7.15 (IQR 0.57)
+RMSE: 9.09 (IQR 0.7)","rf(2422:1)
+Min R²: 0.74
+Max R²: 0.88
+Range R²: 0.14
+Medians:
+R²: 0.82 (IQR 0.03)
+MAE: 7.02 (IQR 0.55)
+RMSE: 8.89 (IQR 0.7)","Mean R2: 0.0079
+Median R2: 0.0035
+IQR: 0.0122
+Minimum R2: 0
+Maximum R2: 0.0446
+Range: 0.0446",13,714,"n=289
+R^2=0.55
+Pearson=0.74
+MAE=9.77
+RMSE=12.51"
+TRIM59,ENST00000494486.1,cg07553761 0.89,"bagEarth(3082:1)
+Min R²: 0.39
+Max R²: 0.89
+Range R²: 0.5
+Medians:
+R²: 0.81 (IQR 0.04)
+MAE: 7.15 (IQR 0.71)
+RMSE: 9.15 (IQR 1.02)","bagEarth(3787:1)
+Min R²: 0.45
+Max R²: 0.9
+Range R²: 0.44
+Medians:
+R²: 0.85 (IQR 0.03)
+MAE: 6.45 (IQR 0.6)
+RMSE: 8.26 (IQR 0.88)","Mean R2: 0.006
+Median R2: 0.0032
+IQR: 0.0062
+Minimum R2: 0
+Maximum R2: 0.051
+Range: 0.051",13,714,"n=289
+R^2=0.56
+Pearson=0.74
+MAE=8.48
+RMSE=11.07"
+TRIM59,ENST00000496222.1,cg07553761 0.89,"bagEarth(3598:1)
+Min R²: 0.32
+Max R²: 0.89
+Range R²: 0.56
+Medians:
+R²: 0.81 (IQR 0.05)
+MAE: 7.19 (IQR 0.85)
+RMSE: 9.15 (IQR 1.25)","bagEarth(29:1)
+Min R²: 0.35
+Max R²: 0.9
+Range R²: 0.55
+Medians:
+R²: 0.84 (IQR 0.05)
+MAE: 6.64 (IQR 0.82)
+RMSE: 8.47 (IQR 1.37)","Mean R2: 0.004
+Median R2: 0.0016
+IQR: 0.0035
+Minimum R2: 0
+Maximum R2: 0.0333
+Range: 0.0333",14,636,"n=289
+R^2=0.49
+Pearson=0.70
+MAE=10.76
+RMSE=13.94"
+MIR29B2CHG,"ENST00000487977.2
+ENST00000652846.1
+ENST00000702741.1","cg10501210 -0.86
+(negative)","ranger(3687:1)
+Min R²: 0.73
+Max R²: 0.89
+Range R²: 0.16
+Medians:
+R²: 0.82 (IQR 0.03)
+MAE: 6.73 (IQR 0.58)
+RMSE: 8.81 (IQR 0.78)","ranger(3830:1)
+Min R²: 0.78
+Max R²: 0.9
+Range R²: 0.12
+Medians:
+R²: 0.85 (IQR 0.03)
+MAE: 6.27 (IQR 0.53)
+RMSE: 8.09 (IQR 0.69)","Mean R2: 0.0061
+Median R2: 0.0035
+IQR: 0.0061
+Minimum R2: 0
+Maximum R2: 0.0398
+Range: 0.0398",5,687,"n=656
+R^2=0.42
+Pearson=0.65
+MAE=11.13
+RMSE=13.35"
+OBSCN,ENST00000636476.2,"cg04193160 0.76
+cg19261426 -0.72","gamboost(3928:1)
+Min R²: 0.68
+Max R²: 0.89
+Range R²: 0.2
+Medians:
+R²: 0.82 (IQR 0.04)
+MAE: 6.91 (IQR 0.61)","gamboost(3526:1)
+Min R²: 0.76
+Max R²: 0.90
+Range R²: 0.14
+Medians:
+R²: 0.84 (IQR 0.03)
+MAE: 6.41 (IQR 0.56)
+RMSE: 8.40 (IQR 0.81)","Mean R2: 0.005
+Median R2: 0.002
+IQR: 0.006
+Minimum R2: 0
+Maximum R2: 0.0468
+Range: 0.0468",57,714,"n=250
+R^2=0.31
+Pearson=0.56
+MAE=11.55
+RMSE=14.34"
+KLF14,ENST00000583337.4,"cg08097417 0.83
+cg07955995 0.83","ppr(2155:1)
+Min R²: 0.69
+Max R²: 0.89
+Range R²: 0.19
+Medians:
+R²: 0.8 (IQR 0.04)
+MAE: 6.99 (IQR 0.66)
+RMSE: 9.32 (IQR 0.91)","ppr(2770:1)
+Min R²: 0.76
+Max R²: 0.91
+Range R²: 0.14
+Medians:
+R²: 0.85 (IQR 0.03)
+MAE: 6.11 (IQR 0.56)
+RMSE: 8.1 (IQR 0.83)","Mean R2: 0.0063
+Median R2: 0.0037
+IQR: 0.0094
+Minimum R2: 0
+Maximum R2: 0.05
+Range: 0.05",13,685,"n=644
+R^2=0.45
+Pearson=0.67
+MAE=8.95
+RMSE=11.85"
+PRRT1,ENST00000472641.1,"cg24125828 0.75
+cg13782301 0.74
+cg18501647 0.73
+cg14757228 0.73
+cg27067781 0.73
+cg11945824 0.72
+cg22897615 0.70","brnn(2245:1)
+Min R²: 0.73
+Max R²: 0.89
+Range R²: 0.15
+Medians:
+R²: 0.83 (IQR 0.03)
+MAE: 6.71 (IQR 0.59)
+RMSE: 8.74 (IQR 0.74)","brnn(285:1)
+Min R²: 0.78
+Max R²: 0.9
+Range R²: 0.12
+Medians:
+R²: 0.86 (IQR 0.02)
+MAE: 6.19 (IQR 0.52)
+RMSE: 7.95 (IQR 0.64)","Mean R2: 0.0072
+Median R2: 0.0022
+IQR: 0.0085
+Minimum R2: 0
+Maximum R2: 0.0457
+Range: 0.0457",46,678,"n=593
+R^2=0.41
+Pearson=0.64
+MAE=12.20
+RMSE=15.56"
+PRRT1,ENST00000375150.6,"cg24125828 0.76
+cg13782301 0.74
+cg14757228 0.73
+cg18501647 0.73
+cg27067781 0.73
+cg11945824 0.72
+cg22897615 0.70","brnn(2973:1)
+Min R²: 0.72
+Max R²: 0.88
+Range R²: 0.15
+Medians:
+R²: 0.82 (IQR 0.03)
+MAE: 6.96 (IQR 0.61)
+RMSE: 9 (IQR 0.81)","brnn(1322:1)
+Min R²: 0.77
+Max R²: 0.91
+Range R²: 0.13
+Medians:
+R²: 0.85 (IQR 0.03)
+MAE: 6.28 (IQR 0.55)
+RMSE: 8.15 (IQR 0.72)","Mean R2: 0.0078
+Median R2: 0.0029
+IQR: 0.0081
+Minimum R2: 0
+Maximum R2: 0.0536
+Range: 0.0536",76,663,"n=270
+R^2=0.44
+Pearson=0.66
+MAE=10.77
+RMSE=13.76"
+OBSCN,ENST00000662438.1,"cg04193160 0.76
+cg19261426 -0.72","ppr(3526:1)
+Min R²: 0.64
+Max R²: 0.88
+Range R²: 0.24
+Medians:
+R²: 0.8 (IQR 0.04)
+MAE: 6.98 (IQR 0.66)","ppr(2943:1)
+Min R²: 0.73
+Max R²: 0.90
+Range R²: 0.17
+Medians:
+R²: 0.84 (IQR 0.03)
+MAE: 6.34 (IQR 0.57)
+RMSE: 8.39 (IQR 0.85)","Mean R2: 0.0074
+Median R2: 0.0031
+IQR: 0.0101
+Minimum R2: 0
+Maximum R2: 0.0705
+Range: 0.0705",55,714,"n=283
+R^2=0.23
+Pearson=0.48
+MAE=13.22
+RMSE=16.68"
+CALB1,ENST00000518457.5,cg26290632 0.88,"ppr(1412:1)
+Min R²: 0.65
+Max R²: 0.87
+Range R²: 0.21
+Medians:
+R²: 0.79 (IQR 0.04)
+MAE: 7.35 (IQR 0.64)
+RMSE: 9.67 (IQR 0.9)","ppr(1502:1)
+Min R²: 0.78
+Max R²: 0.91
+Range R²: 0.13
+Medians:
+R²: 0.86 (IQR 0.03)
+MAE: 5.99 (IQR 0.54)
+RMSE: 7.94 (IQR 0.72)","Mean R2: 0.0071
+Median R2: 0.0028
+IQR: 0.0098
+Minimum R2: 0
+Maximum R2: 0.059
+Range: 0.059",8,671,"n=642
+R^2=0.34
+Pearson=0.59
+MAE=18.58
+RMSE=21.89"
+CALB1,"ENST00000476853.1
+ENST00000473670.1",cg26290632 0.88,"ppr(2556:1)
+Min R²: 0.68
+Max R²: 0.87
+Range R²: 0.19
+Medians:
+R²: 0.79 (IQR 0.04)
+MAE: 7.35 (IQR 0.64)
+RMSE: 9.68 (IQR 0.88)","ppr(1561:1)
+Min R²: 0.78
+Max R²: 0.91
+Range R²: 0.13
+Medians:
+R²: 0.86 (IQR 0.02)
+MAE: 6.02 (IQR 0.53)
+RMSE: 7.95 (IQR 0.69)","Mean R2: 0.0057
+Median R2: 0.0018
+IQR: 0.0073
+Minimum R2: 0
+Maximum R2: 0.0422
+Range: 0.0422",8,710,"n=642
+R^2=0.37
+Pearson=0.61
+MAE=16.35
+RMSE=19.61"
+CALB1,ENST00000265431.7,cg26290632 0.88,"ppr(2053:1)
+Min R²: 0.65
+Max R²: 0.87
+Range R²: 0.21
+Medians:
+R²: 0.78 (IQR 0.04)
+MAE: 7.44 (IQR 0.68)
+RMSE: 9.83 (IQR 0.95)","ppr(2016:1)
+Min R²: 0.75
+Max R²: 0.9
+Range R²: 0.15
+Medians:
+R²: 0.84 (IQR 0.03)
+MAE: 6.44 (IQR 0.57)
+RMSE: 8.51 (IQR 0.76)","Mean R2: 0.0043
+Median R2: 0.0023
+IQR: 0.0051
+Minimum R2: 0
+Maximum R2: 0.0296
+Range: 0.0296",5,671,"n=642
+R^2=0.35
+Pearson=0.59
+MAE=17.29
+RMSE=20.72"
+CALB1,ENST00000482702.5,cg26290632 0.88,"ppr(2556:1)
+Min R²: 0.67
+Max R²: 0.86
+Range R²: 0.19
+Medians:
+R²: 0.79 (IQR 0.04)
+MAE: 7.41 (IQR 0.64)
+RMSE: 9.78 (IQR 0.93)","ppr(1561:1)
+Min R²: 0.78
+Max R²: 0.92
+Range R²: 0.13
+Medians:
+R²: 0.86 (IQR 0.02)
+MAE: 6.09 (IQR 0.52)
+RMSE: 8 (IQR 0.7)","Mean R2: 0.0059
+Median R2: 0.0039
+IQR: 0.0075
+Minimum R2: 0
+Maximum R2: 0.0374
+Range: 0.0374",7,710,"n=642
+R^2=0.36
+Pearson=0.60
+MAE=16.06
+RMSE=19.37"
+PRRT1,ENST00000211413.10,"cg24125828 0.76
+cg13782301 0.74
+cg14757228 0.73
+cg18501647 0.73
+cg27067781 0.73
+cg11945824 0.72
+cg22897615 0.70","bagEarthGCV(3125:1)
+Min R²: 0.74
+Max R²: 0.9
+Range R²: 0.15
+Medians:
+R²: 0.83 (IQR 0.03)
+MAE: 6.63 (IQR 0.58)
+RMSE: 8.57 (IQR 0.76)","bagEarthGCV(1920:1)
+Min R²: 0.79
+Max R²: 0.91
+Range R²: 0.12
+Medians:
+R²: 0.86 (IQR 0.03)
+MAE: 6.11 (IQR 0.55)
+RMSE: 7.92 (IQR 0.71)","Mean R2: 0.0051
+Median R2: 0.0022
+IQR: 0.0059
+Minimum R2: 0
+Maximum R2: 0.0516
+Range: 0.0516",60,660,"n=598
+R^2=0.46
+Pearson=0.68
+MAE=12.54
+RMSE=15.29"
+PRRT1,ENST00000495191.5,"cg24125828 0.76
+cg13782301 0.74
+cg14757228 0.73
+cg18501647 0.73
+cg27067781 0.73
+cg11945824 0.72
+cg22897615 0.70","bagEarthGCV(3125:1)
+Min R²: 0.74
+Max R²: 0.9
+Range R²: 0.15
+Medians:
+R²: 0.83 (IQR 0.03)
+MAE: 6.6 (IQR 0.58)
+RMSE: 8.53 (IQR 0.75)","bagEarthGCV(3125:1)
+Min R²: 0.79
+Max R²: 0.91
+Range R²: 0.11
+Medians:
+R²: 0.86 (IQR 0.03)
+MAE: 6.1 (IQR 0.55)
+RMSE: 7.88 (IQR 0.71)","Mean R2: 0.0067
+Median R2: 0.0029
+IQR: 0.0066
+Minimum R2: 0
+Maximum R2: 0.0417
+Range: 0.0417",62,660,"n=598
+R^2=0.47
+Pearson=0.68
+MAE=14.92
+RMSE=17.62"
+KCNS1,ENST00000537075.3,cg19702785 0.80,"ppr(947:1)
+Min R²: 0.65
+Max R²: 0.88
+Range R²: 0.22
+Medians:
+R²: 0.78 (IQR 0.04)
+MAE: 7.44 (IQR 0.65)
+RMSE: 9.82 (IQR 0.93)","ppr(2518:1)
+Min R²: 0.73
+Max R²: 0.9
+Range R²: 0.16
+Medians:
+R²: 0.83 (IQR 0.04)
+MAE: 6.53 (IQR 0.59)
+RMSE: 8.64 (IQR 0.92)","Mean R2: 0.0068
+Median R2: 0.0036
+IQR: 0.0078
+Minimum R2: 0
+Maximum R2: 0.0602
+Range: 0.0602",12,713,"n=656
+R^2=0.40
+Pearson=0.63
+MAE=12
+RMSE=14.86"
+VTRNA1-2,ENST00000689319.1,cg23500537 0.87,"brnn(2065:1)
+Min R²: 0.68
+Max R²: 0.86
+Range R²: 0.17
+Medians:
+R²: 0.78 (IQR 0.03)
+MAE: 7.83 (IQR 0.61)
+RMSE: 9.93 (IQR 0.77)","brnn(451:1)
+Min R²: 0.73
+Max R²: 0.88
+Range R²: 0.15
+Medians:
+R²: 0.81 (IQR 0.03)
+MAE: 7.09 (IQR 0.59)
+RMSE: 9.11 (IQR 0.73)","Mean R2: 0.0041
+Median R2: 0.0013
+IQR: 0.0054
+Minimum R2: 0
+Maximum R2: 0.0329
+Range: 0.0329",6,703,"n=568
+R^2=0.41
+Pearson=0.64
+MAE=17.13
+RMSE=20.21"
+OTUD7A,ENST00000560598.2,"cg04875128 0.84
+cg01763090 0.81","bstTree(130:1)
+Min R²: 0.65
+Max R²: 0.87
+Range R²: 0.21
+Medians:
+R²: 0.79 (IQR 0.04)
+MAE: 7.43 (IQR 0.63)","bstTree(3173:1)
+Min R²: 0.67
+Max R²: 0.89
+Range R²: 0.22
+Medians:
+R²: 0.80 (IQR 0.04)
+MAE: 7.11 (IQR 0.61)
+RMSE: 9.30 (IQR 0.96)","Mean R2: 0.0065
+Median R2: 0.0038
+IQR: 0.0077
+Minimum R2: 0
+Maximum R2: 0.0535
+Range: 0.0535",11,714,"n=517
+R^2=0.44
+Pearson=0.66
+MAE=10.05
+RMSE=12.52"
+PRRT1,ENST00000467780.5,"cg24125828 0.74
+cg13782301 0.74
+cg18501647 0.73
+cg14757228 0.73
+cg27067781 0.72
+cg11945824 0.71","brnn(3178:1)
+Min R²: 0.65
+Max R²: 0.86
+Range R²: 0.21
+Medians:
+R²: 0.77 (IQR 0.04)
+MAE: 7.82 (IQR 0.64)
+RMSE: 10.11 (IQR 0.8)","brnn(3419:1)
+Min R²: 0.75
+Max R²: 0.89
+Range R²: 0.14
+Medians:
+R²: 0.84 (IQR 0.03)
+MAE: 6.65 (IQR 0.57)
+RMSE: 8.49 (IQR 0.71)","Mean R2: 0.0056
+Median R2: 0.0028
+IQR: 0.0059
+Minimum R2: 0
+Maximum R2: 0.0635
+Range: 0.0635",41,686,"n=598
+R^2=0.37
+Pearson=0.61
+MAE=21.15
+RMSE=24.12"
+SYNGR3,ENST00000248121.7,cg11220950 0.81,"cubist(268:45)
+Min R²: 0.63
+Max R²: 0.85
+Range R²: 0.22
+Medians:
+R²: 0.77 (IQR 0.05)
+MAE: 7.8 (IQR 0.71)","cubist(3488:1)
+Min R²: 0.68
+Max R²: 0.88
+Range R²: 0.21
+Medians:
+R²: 0.81 (IQR 0.04)
+MAE: 7.02 (IQR 0.61)
+RMSE: 9.18 (IQR 0.90)","Mean R2: 0.0035
+Median R2: 0.0013
+IQR: 0.004
+Minimum R2: 0
+Maximum R2: 0.0362
+Range: 0.0362",12,714,"n=656
+R^2=0.34
+Pearson=0.58
+MAE=12.19
+RMSE=15.82"
+SPTBN4,ENST00000352632.7,"cg05764628 0.69
+cg02997982 0.68
+cg17768491 0.68
+cg09381003 0.68
+cg02576468 0.68","bagEarthGCV(3523:1)
+Min R²: 0.6
+Max R²: 0.83
+Range R²: 0.22
+Medians:
+R²: 0.73 (IQR 0.04)
+MAE: 8.66 (IQR 0.67)
+RMSE: 10.99 (IQR 0.86)","bagEarthGCV(710:1)
+Min R²: 0.66
+Max R²: 0.85
+Range R²: 0.19
+Medians:
+R²: 0.77 (IQR 0.04)
+MAE: 8.02 (IQR 0.65)
+RMSE: 10.22 (IQR 0.82)","Mean R2: 0.0057
+Median R2: 0.0023
+IQR: 0.0061
+Minimum R2: 0
+Maximum R2: 0.036
+Range: 0.036",42,682,"n=108
+R^2=0.238
+Pearson=0.488
+MAE=13.06
+RMSE=15.56"
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+CACNA1G,ENST00000359106.10,cg11071401 0.70 (p),"svmRadialSigma(976:1)
+Min R²: 0.61
+Max R²: 0.84
+Range R²: 0.22
+Medians:
+R²: 0.75 (IQR 0.05)
+MAE: 8.26 (IQR 0.7)
+RMSE: 10.66 (IQR 0.96)",,"svmRadialSigma(39:1)
+Min R²: 0.00
+Max R²: 0.08
+Range R²: 0.08
+Medians:
+R²: 0.01 (IQR 0.01)
+MAE: 17.74 (IQR 0.60)
+RMSE: 20.92 (IQR 0.67)",41,714,
+RNF180,ENST00000504296.1,"cg09839635 0.63
+cg14591786 0.62
+cg16485558 0.61","svmRadialSigma(1655:1)
+Min R²: 0.64
+Max R²: 0.85
+Range R²: 0.21
+Medians:
+R²: 0.77 (IQR 0.04)
+MAE: 7.74 (IQR 0.66)
+RMSE: 10.19 (IQR 0.83)",,"svmRadialSigma(43:1)
+Min R²: 0.00
+Max R²: 0.08
+Range R²: 0.08
+Medians:
+R²: 0.00 (IQR 0.01)
+MAE: 18.06 (IQR 0.52)
+RMSE: 21.24 (IQR 0.56)",8,714,
+SLC1A6,ENST00000430939.6,"cg05923226 0.78
+cg06522681 0.63","monmlp(2746:1)
+Min R²: 0.56
+Max R²: 0.82
+Range R²: 0.26
+Medians:
+R²: 0.72 (IQR 0.05)
+MAE: 8.67 (IQR 0.71)
+RMSE: 11.17 (IQR 1)",,"monmlp(91:1)
+Min R²: 0.00
+Max R²: 0.05
+Range R²: 0.05
+Medians:
+R²: 0.00 (IQR 0.01)
+MAE: 18.32 (IQR 0.76)
+RMSE: 21.73 (IQR 0.76)",14,714,
+TP73,ENST00000354437.8,"cg17804348 0.74
+cg00295572 0.70","bagEarthGCV(1801:1)
+Min R²: 0.59
+Max R²: 0.82
+Range R²: 0.23
+Medians:
+R²: 0.71 (IQR 0.05)
+MAE: 8.73 (IQR 0.73)
+RMSE: 11.29 (IQR 0.95)",,"bagEarthGCV(41:1)
+Min R²: 0.00
+Max R²: 0.05
+Range R²: 0.05
+Medians:
+R²: 0.00 (IQR 0.01)
+MAE: 18.61 (IQR 0.82)
+RMSE: 21.98 (IQR 0.73)",27,714,
+FOXG1-AS1,ENST00000546560.5,"cg25078444 0.77
+cg16038120 0.77
+cg03523785 0.71
+cg18299578 0.70","Min R²: 0.54
+Max R²: 0.82
+Range R²: 0.28
+Medians:
+R²: 0.71 (IQR 0.05)
+MAE: 9.00 (IQR 0.75)
+RMSE: 11.36 (IQR 0.96)",,"svmRadialCost(13:1)
+Min R²: 0.00
+Max R²: 0.09
+Range R²: 0.09
+Medians:
+R²: 0.01 (IQR 0.02)
+MAE: 18.03 (IQR 0.67)
+RMSE: 21.24 (IQR 0.86)",12,683,
+ZIK1,ENST00000597219.1,"cg21911021 0.82
+cg06707978 0.74",,,,,,
+TEKTL1,ENST00000292574.4,"cg05923226 0.78
+cg06522681 0.63","ppr(3876:1)
+Min R²: 0.57
+Max R²: 0.82
+Range R²: 0.26
+Medians:
+R²: 0.72 (IQR 0.05)
+MAE: 8.71 (IQR 0.71)
+RMSE: 11.22 (IQR 0.96)",,"ppr(41:1)
+Min R²: 0.00
+Max R²: 0.06
+Range R²: 0.06
+Medians:
+R²: 0.00 (IQR 0.01)
+MAE: 18.39 (IQR 0.73)
+RMSE: 21.67 (IQR 0.77)",,,"ppr 0.75
+monmlp 0.75
+svmRadialSigma 0.75"
+CELF6,ENST00000567083.2,"cg21801378 0.81
+cg20809087 0.74",,,,,,
+PPM1N,ENST00000415077.1,"cg07068062 0.66
+cg05260085 0.63","bagEarth(2357:1)
+Min R²: 0.54
+Max R²: 0.78
+Range R²: 0.25
+Medians:
+R²: 0.66 (IQR 0.05)
+MAE: 9.76 (IQR 0.75)
+RMSE: 12.37 (IQR 0.99)",,,,,"krlsRadial 0.76
+bagEarth
+monmlp
+brnn
+
+"
+CACNA1G,ENST00000442258.6,cg11071401 0.70,,,,,,"svmPoly 0.8
+brnn 0.78
+bagEarth 0.78"
