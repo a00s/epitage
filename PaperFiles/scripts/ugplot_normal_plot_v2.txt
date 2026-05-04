@@ -1,0 +1,181 @@
+library(ggplot2)
+library(grid)
+
+# ===== parâmetros =====
+transcript_name <- "ENST00000352632.7"
+model_name <- "SPTBN4"
+
+metric_col <- "R2"   # <<< DEFINA AQUI A COLUNA: "R2", "MAE", "RMSE"
+
+bin_w  <- 0.005
+y_max  <- 900
+x_break <- 0.1
+# ======================
+
+# ----------- NORMALIZAÇÃO ROBUSTA -----------
+vals_raw <- {{dataset}}
+
+to_numeric_safe <- function(x) {
+  if (is.factor(x)) x <- as.character(x)
+
+  if (is.character(x)) {
+    x <- trimws(x)
+    x <- gsub(",", ".", x)
+  }
+
+  suppressWarnings(as.numeric(x))
+}
+
+pick_metric_column <- function(X, colname) {
+
+  if (is.vector(X) && !is.data.frame(X)) {
+    return(to_numeric_safe(X))
+  }
+
+  if (is.matrix(X)) {
+    X <- as.data.frame(X)
+  }
+
+  if (!is.data.frame(X)) {
+    stop("{{dataset}} precisa ser um vetor, matrix ou data.frame.")
+  }
+
+  if (!colname %in% names(X)) {
+    stop(
+      paste0(
+        "A coluna '", colname, "' não foi encontrada em {{dataset}}.\n",
+        "Colunas disponíveis: ",
+        paste(names(X), collapse = ", ")
+      )
+    )
+  }
+
+  to_numeric_safe(X[[colname]])
+}
+
+# <<< pega R2
+vals_vec <- pick_metric_column(vals_raw, metric_col)
+
+# <<< pega MAE
+mae_vec <- pick_metric_column(vals_raw, "MAE")
+
+# filtra válidos
+valid_idx <- is.finite(vals_vec)
+
+if (tolower(metric_col) %in% c("r2", "r.2", "r²")) {
+  valid_idx <- valid_idx & vals_vec >= 0 & vals_vec <= 1
+}
+
+vals <- vals_vec[valid_idx]
+mae_vals <- mae_vec[valid_idx]
+
+d_valid <- data.frame(value = vals)
+
+if (nrow(d_valid) == 0) {
+  stop("Nenhum valor válido encontrado depois do filtro.")
+}
+
+# ----------- estatísticas -----------
+m_median <- median(d_valid$value, na.rm = TRUE)
+iqr      <- IQR(d_valid$value, na.rm = TRUE)
+n_val    <- length(vals)
+
+mae_median <- median(mae_vals, na.rm = TRUE)
+
+# min/max
+x_min <- min(d_valid$value, na.rm = TRUE)
+x_max <- max(d_valid$value, na.rm = TRUE)
+
+# ----------- TEXTO FINAL -----------
+sub_txt <- paste0(
+  "n = ", n_val,
+  "   Median = ", round(m_median, 2),
+  "   MAE = ", round(mae_median, 2),
+  "   IQR = ", round(iqr, 3)
+)
+
+# eixo X
+if (tolower(metric_col) %in% c("r2", "r.2", "r²")) {
+  x_limits <- c(0, 1)
+  x_breaks <- seq(0.1, 1, x_break)
+  x_label <- expression(bold(R^2))
+  title_label <- "R²"
+} else {
+  x_limits <- c(x_min, x_max)
+  x_breaks <- pretty(c(x_min, x_max), n = 8)
+  x_label <- metric_col
+  title_label <- metric_col
+}
+
+# ===== plot =====
+ggplot(d_valid, aes(x = value)) +
+  geom_histogram(
+    binwidth = bin_w,
+    fill = "#0072B2",
+    color = "black",
+    boundary = 0,
+    closed = "left",
+    linewidth = 0.4
+  ) +
+  scale_x_continuous(
+    limits = x_limits,
+    breaks = x_breaks,
+    expand = expansion(mult = c(0, 0.02))
+  ) +
+  scale_y_continuous(
+    limits = c(0, y_max),
+    breaks = pretty(c(0, y_max), n = 6),
+    expand = c(0, 0)
+  ) +
+  labs(
+    title = paste("Distribution of", title_label, "-", transcript_name),
+    subtitle = sub_txt,
+    x = x_label,
+    y = expression(bold("Frequency                              "))
+  ) +
+  geom_vline(
+    xintercept = m_median,
+    color = "blue",
+    linetype = "dotted",
+    linewidth = 1.2
+  ) +
+  geom_vline(
+    xintercept = x_min,
+    colour = "gray60",
+    linetype = "dashed",
+    linewidth = 3
+  ) +
+  geom_vline(
+    xintercept = x_max,
+    colour = "gray60",
+    linetype = "dashed",
+    linewidth = 3
+  ) +
+  annotate(
+    "text",
+    x = if (tolower(metric_col) %in% c("r2", "r.2", "r²")) 0.05 else x_min,
+    y = y_max * 0.1,
+    label = model_name,
+    color = "grey70",
+    size = 30,
+    fontface = "bold",
+    hjust = 0,
+    vjust = 0
+  ) +
+  theme_bw(base_size = 20) +
+  theme(
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor.x = element_blank(),
+    panel.grid.minor.y = element_blank(),
+    panel.grid.major.y = element_line(linewidth = 0.6, colour = "grey80"),
+    axis.line        = element_line(linewidth = 0.8, colour = "black"),
+    axis.ticks       = element_line(linewidth = 0.8, colour = "black"),
+    axis.ticks.length= unit(6, "pt"),
+    axis.text.x      = element_text(size = 40, angle = 90, vjust = 0.5, hjust = 1),
+    axis.text.y      = element_text(size = 40),
+    axis.title.x     = element_text(size = 40, face = "bold", hjust = 0),
+    axis.title.y     = element_text(size = 40, face = "bold", vjust = 0),
+    plot.title       = element_text(hjust = 0.5, face = "bold", size = 40),
+    plot.subtitle    = element_text(hjust = 0.5, size = 40),
+    panel.border     = element_rect(colour = "black", fill = NA, linewidth = 0.8)
+  )
