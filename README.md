@@ -44,6 +44,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 | ![CpG centered](https://img.shields.io/badge/CpG_centered-blue?style=flat-square) | MIR29B2CHG | ENST00000487977.2<br>ENST00000652846.1<br>ENST00000702741.1 | -0.86 | 0.82 | 5 | 687 |
 | ![ML centered](https://img.shields.io/badge/ML_centered-orange?style=flat-square) | OBSCN | ENST00000422127.5<br>ENST00000680850.1<br>ENST00000570156.7 | 0.76 | 0.84 | 69 | 714 |
 | ![CpG centered](https://img.shields.io/badge/CpG_centered-blue?style=flat-square) | OTUD7A | ENST00000560598.2 | 0.84 | 0.79 | 11 | 714 |
+| ![CpG centered](https://img.shields.io/badge/CpG_centered-blue?style=flat-square) | OTUD7A | ENST00000678495.1 | 0.84 | 0.78 | 4 | 714 |
 | ![CpG centered](https://img.shields.io/badge/CpG_centered-blue?style=flat-square) | KLF14 | ENST00000583337.4 | 0.83 | 0.8 | 13 | 685 |
 | ![ML centered](https://img.shields.io/badge/ML_centered-orange?style=flat-square) | PRRT1 | ENST00000472641.1 | 0.75 | 0.83 | 46 | 678 |
 | ![ML centered](https://img.shields.io/badge/ML_centered-orange?style=flat-square) | PRRT1 | ENST00000211413.10 | 0.76 | 0.83 | 60 | 660 |
@@ -51,6 +52,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 | ![ML centered](https://img.shields.io/badge/ML_centered-orange?style=flat-square) | OBSCN | ENST00000636476.2 | 0.76 | 0.82 | 57 | 714 |
 | ![ML centered](https://img.shields.io/badge/ML_centered-orange?style=flat-square) | PRRT1 | ENST00000375150.6 | 0.76 | 0.82 | 76 | 663 |
 | ![CpG centered](https://img.shields.io/badge/CpG_centered-blue?style=flat-square) | SYNGR3 | ENST00000248121.7 | 0.81 | 0.77 | 12 | 714 |
+| ![ML centered](https://img.shields.io/badge/ML_centered-orange?style=flat-square) | OBSCN | ENST00000284548.16 | 0.76 | 0.8 | 65 | 714 |
 | ![ML centered](https://img.shields.io/badge/ML_centered-orange?style=flat-square) | OBSCN | ENST00000662438.1 | 0.76 | 0.8 | 55 | 714 |
 | ![CpG centered](https://img.shields.io/badge/CpG_centered-blue?style=flat-square) | KCNS1 | ENST00000537075.3 | 0.8 | 0.78 | 12 | 713 |
 | ![CpG centered](https://img.shields.io/badge/CpG_centered-blue?style=flat-square) | SLC1A6 | ENST00000430939.6 | 0.78 | 0.72 | 14 | 714 |
