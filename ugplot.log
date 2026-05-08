@@ -1,0 +1,46 @@
+ugplot checkpoint log (last update: 2026-05-05 19:24:20)
+Last model analyzed: M5Rules
+
+Latest results (top 20):
+       Model        R2       MAE     RMSE Dataset.seed Training.seed
+       bstSm 0.3719164  9.175806 11.25968            1             1
+    gamboost 0.3634596  9.273564 11.33339            1             1
+    bagEarth 0.3582892  9.315375 11.37133            1             1
+ bagEarthGCV 0.3552928  9.319533 11.39818            1             1
+     bstTree 0.3371920  9.518614 11.62406            1             1
+         gbm 0.3370880  9.441533 11.61508            1             1
+    krlsPoly 0.3270827 11.091365 14.10043            1             1
+   gamSpline 0.3072627  9.959586 12.06727            1             1
+  krlsRadial 0.2897085  9.929169 12.05227            1             1
+    gamLoess 0.2830983 10.469316 12.81141            1             1
+     cforest 0.2560803  9.853494 12.24674            1             1
+    gcvEarth 0.2515415 10.188831 12.47899            1             1
+ gaussprPoly 0.2247035 10.372981 12.93616            1             1
+      cubist 0.2166005 10.875874 13.17870            1             1
+       earth 0.2076360 10.164590 12.77492            1             1
+   kernelpls 0.1988085 10.322543 12.98910            1             1
+        brnn 0.1928700 10.389424 13.02143            1             1
+    bayesglm 0.1827007 10.536920 13.30285            1             1
+         glm 0.1818433 10.647714 13.47481            1             1
+          lm 0.1818433 10.647714 13.47481            1             1
+   Threshold.scope Imputation.scope
+ full_before_split   split_separate
+ full_before_split   split_separate
+ full_before_split   split_separate
+ full_before_split   split_separate
+ full_before_split   split_separate
+ full_before_split   split_separate
+ full_before_split   split_separate
+ full_before_split   split_separate
+ full_before_split   split_separate
+ full_before_split   split_separate
+ full_before_split   split_separate
+ full_before_split   split_separate
+ full_before_split   split_separate
+ full_before_split   split_separate
+ full_before_split   split_separate
+ full_before_split   split_separate
+ full_before_split   split_separate
+ full_before_split   split_separate
+ full_before_split   split_separate
+ full_before_split   split_separate
