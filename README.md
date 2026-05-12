@@ -22,7 +22,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 | ![ML centered](https://img.shields.io/badge/ML_centered-orange?style=flat-square) | Entries show stronger transcript-level performance when multiple CpGs are analysed together. |
 | ![CpG & ML](https://img.shields.io/badge/CpG_&_ML-purple?style=flat-square) | Entries combining both CpG-centered and ML-centered signals. |
 
-## Epitage transcript rankings
+## Epitage transcript rankings GEO GSE87571
 
 | Type | Gene | Transcripts | Best CpG Spearman | Median ML R² | CpGs | Samples |
 |------|------|-------------|-------------------|--------------|------|---------|
