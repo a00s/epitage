@@ -2,7 +2,7 @@
 
 **A transcript-level DNA methylation ranking resource for human ageing research**
 
-Epitage is an open scientific resource created to identify **gene transcripts whose DNA methylation profiles are strongly associated with chronological age in human blood**.
+Epitage is an open scientific resource that assigns scores to gene transcripts based on the association between their DNA methylation profiles and chronological age in human blood, allowing them to be ranked for further investigation.
 
 ## Related research paper
 
