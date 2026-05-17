@@ -66,7 +66,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 | ![ML centered](https://img.shields.io/badge/ML_centered-orange?style=flat-square) | CACNA1G | ENST00000359106.10 | 0.7 | 0.75 | 41 | 714 |
 | ![CpG & ML](https://img.shields.io/badge/CpG_&_ML-purple?style=flat-square) | PPM1N | ENST00000415077.1 | 0.66 | 0.66 | 11 | 714 |
 | ![Processing](https://img.shields.io/badge/Processing-006400?style=flat-square) | ZIK1 | ENST00000597219.1 | 0.82 | — | — | — |
-| — | CELF6 | ENST00000567083.2 | 0.81 | — | — | — |
+| ![Processing](https://img.shields.io/badge/Processing-006400?style=flat-square) | CELF6 | ENST00000567083.2 | 0.81 | — | — | — |
 | — | CACNA1G | ENST00000442258.6 | 0.7 | — | — | — |
 
 ## Waiting list
