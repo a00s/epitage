@@ -69,6 +69,7 @@ Zenodo DOI: https://doi.org/10.5281/zenodo.19824653
 | ![CpG centered](https://img.shields.io/badge/CpG_centered-blue?style=flat-square) | CELF6 | ENST00000567083.2 | 0.81 | 0.74 | 13 | 712 |
 | — | CACNA1G | ENST00000442258.6 | 0.7 | — | — | — |
 
+The remaining transcripts are being processed under the new automated version of ugPlot and will be available soon
 ## Waiting list
 
 | Gene | Transcript |
