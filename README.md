@@ -7,7 +7,7 @@ Epitage is an open scientific resource that assigns scores to gene transcripts b
 ## Related research paper
 
 **A machine learning approach to identify key Epigenetic Transcripts for Ageing research in human blood (Epitage)**  
-DOI: https://doi.org/10.64898/2026.02.09.704870
+[DOI: https://doi.org/10.64898/2026.02.09.704870](https://doi.org/10.1007/s10522-026-10473-6)
 
 ## Generated with ugPlot
 
@@ -150,4 +150,4 @@ The remaining transcripts are being processed under the new automated version of
 ## Citation
 
 *A machine learning approach to identify key Epigenetic Transcripts for Ageing research in human blood (Epitage).*  
-https://doi.org/10.64898/2026.02.09.704870
+[https://doi.org/10.64898/2026.02.09.704870](https://doi.org/10.1007/s10522-026-10473-6)
